@@ -10,16 +10,30 @@ body {
   padding-bottom: 40px;
   background-color: #620403;
   box-shadow: inset 0 0 5rem rgb(0 0 0 / 50%);
+  background-image: url(../img/imagemFundo.png);
+
+}
+
+.monkersbranco {
+  text-align: center;
+  width: 110px;
+}
+
+.cadastro {
+  text-align: center;
+  color: #fff;
+  font-family: 'Jockey One', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
 }
 
 .cover-container {
-  color: rgb(8, 8, 8);  
+  color: rgb(0, 0, 0);  
 }
 
 .top {
   max-width: 42em;
   color: rgb(255, 255, 255);  
-
 }
 
 .btn-group-lg>.btn, .btn-lg {
@@ -29,10 +43,16 @@ body {
   --bs-btn-border-radius: 0.5rem;
   background-color: #ffffff;
   color: #f50202; 
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 200px;
+  font-weight: 500;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .bg-branco:hover {
-  
   color: #f50202;
   transition: 0.2s ease-in-out;
 }
@@ -44,65 +64,63 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.fw-normal {
-  font-weight: 400!important;
-  color: #fffbfb;
-}
-
 .form-signin {
-  max-width: 330px;
+  max-width: 450px;
   padding: 15px;
   border-radius: 20px;
-  background-color: #1E1E1E;
+  background-color: #1e1e1eb7;
+  display: block;
 }
 
 .form-signin .form-floating:focus-within {
   z-index: 2;
   color: #f50202;
-
+  
 }
 
 .form-signin input[type="usuario"] {
-    margin-bottom: 1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 1;
-    border-top-right-radius: 1;
+  margin-bottom: 35px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 25px;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: 1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  margin-bottom: 35px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-bottom-right-radius: 1;
-  border-bottom-left-radius: 1;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.checkbox {
-  margin: 10px;
-  color: #fff;
+  margin-bottom: 50px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .conta {
   color: #fff;
 }
 
-
 .cadastrar {
   color: #f50202;
-  
 }
 
 .cadastrar:hover {
   color: #ffffff;
-  
 }
 
+.footer {
+  margin-top: 30px;
+  font-family: 'Jockey One', sans-serif;
+  color: rgba(255, 255, 255, 0.151);
+  font-size: 20px;
+}

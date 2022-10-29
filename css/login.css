@@ -9,7 +9,7 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #620403;
-  box-shadow: inset 0 0 5rem rgb(0 0 0 / 50%);
+  background-image: url(../img/imagemFundo.png);
 }
 
 .cover-container {
@@ -19,7 +19,6 @@ body {
 .top {
   max-width: 42em;
   color: rgb(255, 255, 255);  
-
 }
 
 .btn-group-lg>.btn, .btn-lg {
@@ -29,6 +28,13 @@ body {
   --bs-btn-border-radius: 0.5rem;
   background-color: #ffffff;
   color: #f50202; 
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 125px;
+  font-weight: 500;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .bg-branco:hover {
@@ -44,16 +50,25 @@ body {
   transition: 0.2s ease-in-out;
 }
 
+.monkersbranco {
+  text-align: center;
+  width: 110px;
+}
+
 .fw-normal {
-  font-weight: 400!important;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
   color: #fffbfb;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .form-signin {
-  max-width: 330px;
-  padding: 15px;
+  align-items: center;
+  max-width: 400px;
+  padding: 40px;
   border-radius: 20px;
-  background-color: #1E1E1E;
+  background-color: rgba(30, 30, 30, 0.65);
 }
 
 .form-signin .form-floating:focus-within {
@@ -63,15 +78,21 @@ body {
 }
 
 .form-signin input[type="email"] {
-  margin-bottom: 1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .form-signin input[type="password"] {
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Jockey One', sans-serif;
 }
 
 .checkbox {
@@ -79,8 +100,16 @@ body {
   color: #fff;
 }
 
+.entrar {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+
 .conta {
   color: #fff;
+  font-family: 'Jockey One', sans-serif;
 }
 
 
@@ -94,3 +123,13 @@ body {
   
 }
 
+.checkbox {
+  font-family: 'Jockey One', sans-serif;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d!important;
+  font-family: 'Jockey One', sans-serif;
+
+}
