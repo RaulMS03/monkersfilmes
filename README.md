@@ -28,4 +28,4 @@ Ademais o sistema depende de um banco de dados relacional, feito com o SGBDR **M
 
 Há também como conferir a [protipagem](https://www.figma.com/proto/NU3eiTybBygO9QzbIUjDF2/Untitled?node-id=225%3A44&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=225%3A44)/[telas](https://www.figma.com/file/NU3eiTybBygO9QzbIUjDF2/Untitled?node-id=0%3A1) do sistema no **Figma** e o [site](https://ericcarvlh.github.io/monkers-entertainment/Views/Principais/index.html).
 
-Por fim, é válido ressaltar que os processos do projeto pode ser consultado no [Trello](https://trello.com/b/uoDn853z/monkers-entertainment)
+Por fim, é válido ressaltar que os processos do projeto pode ser consultado no [Trello](https://trello.com/b/uoDn853z/monkers-entertainment).
