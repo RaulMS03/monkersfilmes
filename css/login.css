@@ -66,7 +66,7 @@ body {
 .form-signin {
   align-items: center;
   max-width: 400px;
-  padding: 40px;
+  padding: 20px;
   border-radius: 20px;
   background-color: rgba(30, 30, 30, 0.65);
 }
@@ -103,7 +103,7 @@ body {
 .entrar {
   color: #fff;
   font-weight: 700;
-  margin-top: 60px;
+  top: 100px;
 }
 
 
@@ -131,5 +131,17 @@ body {
   --bs-text-opacity: 1;
   color: #6c757d!important;
   font-family: 'Jockey One', sans-serif;
+}
 
+.form-control::placeholder { 
+  color: red;
+  opacity: 1; 
+}
+
+.form-control:-ms-input-placeholder {
+  color: red;
+}
+
+.form-control::-ms-input-placeholder {
+  color: red;
 }

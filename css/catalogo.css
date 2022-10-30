@@ -1,0 +1,97 @@
+body, header {
+    background-color: #620403;
+    background-image: url(../img/imagemFundo.png)
+}
+
+.nav-inicio {
+    position: absolute;
+    width: 53px;
+    height: 50px;
+    left: 44px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-filmes {
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    left: 130px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-series {
+    position: absolute;
+    width: 55px;
+    height: 50px;
+    left: 216px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-mais {
+    position: absolute;
+    width: 55px;
+    height: 51px;
+    left: 302px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.logo {
+    position: absolute;
+    left: 43.96%;
+    right: 41.24%;
+    top: 4.25%;
+    bottom: 94.15%;
+}
+
+.fa-thin {
+
+}
+
+.perfil {
+    position: absolute;
+    width: 38px;
+    height: 34px;
+    left: 1310px;
+    top: 143px;
+}
+
