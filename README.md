@@ -6,24 +6,26 @@ Foi desenvolvido um projeto denominado Monker's Entertainment, com 5 contribuint
 
 ## Diagrama de Casos de uso
 
-![Casos de uso]()
+![Casos de uso](#)
 
 ## Diagrama de Classes
 
-![Classes]()
+![Classes](#)
 
 Ademais o sistema depende de um banco de dados relacional, feito com o SGBDR **MYSQL**, confira a seguir o **modelo conceitual**, também conhecido como diagrama de entidade e relaacionamento (DER), **lógico**, também conhecido como DER lógico, e **físico**.
 
 ## Modelo conceitual
 
-![Conceitual]()
+![Conceitual](#)
 
 ## Modelo lógico
 
-![Lógico]()
+![Lógico](#)
 
 ## Modelo físico
 
-![Físico]()
+![Físico](#)
 
 Há também como conferir a [protipagem](https://www.figma.com/proto/NU3eiTybBygO9QzbIUjDF2/Untitled?node-id=225%3A44&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=225%3A44)/[telas](https://www.figma.com/file/NU3eiTybBygO9QzbIUjDF2/Untitled?node-id=0%3A1) do sistema no **Figma** e o [site](https://ericcarvlh.github.io/monkers-entertainment/Views/Principais/index.html).
+
+Por fim, é válido ressaltar que os processos do projeto pode ser consultado no [Trello](https://trello.com/b/uoDn853z/monkers-entertainment)
