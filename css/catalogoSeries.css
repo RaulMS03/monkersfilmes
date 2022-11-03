@@ -4,7 +4,7 @@ body {
 
 header {
     position: absolute;
-    width: 1601px;
+    width: 1560px;
     height: 198px;
     left: 0px;
     top: -9px;
@@ -116,6 +116,10 @@ header {
     top: 74.17%;
     bottom: 93.87%;
 
+    color: rgba(141, 141, 141, 0.78);
+}
+
+.lupa:active, .lupa:hover {
     color: #FFFFFF;
 }
 
@@ -413,7 +417,7 @@ header {
 
 footer {
     position: absolute;
-    width: 1670px;
+    width: 1640px;
     height: 274px;
     left: -77px;
     top: 3050px;

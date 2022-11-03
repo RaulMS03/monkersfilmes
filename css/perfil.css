@@ -6,7 +6,7 @@ body {
     position: absolute;
     left: 6.53%;
     right: 26.81%;
-    top: 10.37%;
+    top: 12.43%;
     bottom: 85.28%;
 
     font-family: 'Jockey One';
@@ -15,7 +15,7 @@ body {
     font-size: 40px;
     line-height: 56px;
 
-    color: rgba(156, 156, 156, 0.78);
+    color: #5c5b5b;
 }
 
 .fa-chevron-left:hover {
