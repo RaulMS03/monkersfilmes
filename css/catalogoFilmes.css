@@ -1,0 +1,511 @@
+body {
+    background-image: url(../img/imagemFundo.png);
+}
+
+header {
+    position: absolute;
+    width: 1601px;
+    height: 198px;
+    left: 0px;
+    top: -9px;
+
+    background: rgba(98, 4, 3, 0.69);
+}
+
+.nav-inicio {
+    position: absolute;
+    width: 53px;
+    height: 50px;
+    left: 44px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(156, 156, 156, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-inicio:hover {
+    color: #FFFFFF;
+}
+
+.nav-filmes {
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    left: 130px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-filmes .active:hover {
+    color: #FFFFFF;
+} 
+
+.nav-series {
+    position: absolute;
+    width: 55px;
+    height: 50px;
+    left: 216px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(151, 150, 150, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-series:hover {
+    color: #FFFFFF;
+}
+
+.nav-mais {
+    position: absolute;
+    width: 55px;
+    height: 51px;
+    left: 302px;
+    top: 147px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: rgba(141, 141, 141, 0.78);
+
+    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-mais:hover {
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 500px;
+
+    position: absolute;
+    left: 30.96%;
+    right: 41.24%;
+    top: -5.25%;
+    bottom: 94.15%;
+}
+
+.lupa{
+    position: absolute;
+    left: 82.32%;
+    right: 6.74%;
+    top: 74.17%;
+    bottom: 93.87%;
+
+    color: #FFFFFF;
+}
+
+.perfil {
+    position: absolute;
+    width: 38px;
+    height: 34px;
+    left: 1363px;
+    top: 143px;
+}
+
+.titulo {
+    position: absolute;
+    width: 239px;
+    height: 134px;
+    left: 38px;
+    top: 170px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 134px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.retangulo-principal {
+    position: absolute;
+    width: 1368px;
+    height: 550px;
+    left: 28px;
+    top: 390px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.titulo-1 {
+    position: absolute;
+    width: 543px;
+    height: 109px;
+    left: 38px;
+    top: 1070px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+
+    color: #FFFFFF;
+}
+
+.retangulo-1 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 36px;
+    top: 1210px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-2 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 423px;
+    top: 1210px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-3 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 810px;
+    top: 1210px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-4 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 1197px;
+    top: 1210px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.titulo-2 {
+    position: absolute;
+    width: 543px;
+    height: 109px;
+    left: 38px;
+    top: 1479px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+
+    color: #FFFFFF;
+}
+
+.retangulo-6 {
+    position: absolute;
+    width: 330px;
+    height: 479px;
+    left: 36px;
+    top: 1619px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-7 {
+    position: absolute;
+    width: 330px;
+    height: 479px;
+    left: 423px;
+    top: 1619px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-8 {
+    position: absolute;
+    width: 330px;
+    height: 479px;
+    left: 810px;
+    top: 1619px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-9 {
+    position: absolute;
+    width: 330px;
+    height: 479px;
+    left: 1197px;
+    top: 1619px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.titulo-3 {
+    position: absolute;
+    width: 543px;
+    height: 109px;
+    left: 28px;
+    top: 2170px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+
+    color: #FFFFFF;
+}
+
+.retangulo-11 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 36px;
+    top: 2300px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-12 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 423px;
+    top: 2300px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-13 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 810px;
+    top: 2300px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-14 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 1197px;
+    top: 2300px;
+
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.titulo-4 {
+    position: absolute;
+    width: 554px;
+    height: 52px;
+    left: 28px;
+    top: 2550px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+
+    color: #FFFFFF;
+}
+
+.retangulo-16 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 36px;
+    top: 2690px;
+    
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-17 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 423px;
+    top: 2690px;
+    
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-18 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 810px;
+    top: 2690px;
+    
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.retangulo-19 {
+    position: absolute;
+    width: 330px;
+    height: 227px;
+    left: 1197px;
+    top: 2690px;
+    
+    background: #1E1E1E;
+    box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+footer {
+    position: absolute;
+    width: 1670px;
+    height: 274px;
+    left: -77px;
+    top: 3050px;
+
+    background: rgba(98, 4, 3, 0.69);
+    box-shadow: -2px -10px 21px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-6 {
+    position: absolute;
+    width: 497px;
+    height: 52px;
+    left: 190px;
+    top: 40px;
+
+    font-family: 'Jaldi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 41px;
+
+    color: #ffffff;
+}
+
+.fa-linkedin {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    left: 340px;
+    top: 110px;
+
+    color: #FFFFFF;
+}
+
+.fa-linkedin:hover {
+    color: #007bb6;
+}
+
+.novidades {
+    position: absolute;
+    width: 608px;
+    height: 32px;
+    left: 950px;
+    top: 40px;
+
+    font-family: 'Jaldi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+}
+
+.email {
+    position: absolute;
+    width: 493px;
+    height: 53px;
+    left: 910px;
+    top: 120px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+    background: #1E1E1E;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+}
+
+::placeholder {
+ position: absolute;
+ top: 13px;
+ left: 50px;
+ font-family: 'Jost';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 28px;
+ line-height: 40px;
+
+ color: rgba(255, 255, 255, 0.28);
+}
+
+.copyright { 
+    position: absolute;
+    top: 200px;
+    left: 780px;
+
+    font-family: 'Jockey One';
+    font-size: 20px;
+    color: #646464;
+}
