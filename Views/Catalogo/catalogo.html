@@ -17,19 +17,24 @@
 
     <body>
         <header>
-            <nav>
-                <a class="nav-link nav-masterhead nav-inicio active" href="">INÍCIO</a>
-                <a class="nav-link nav-filmes" href="../../Views/Catalogo/catalogoFilmes.html">FILMES</a>
-                <a class="nav-link nav-series" href="../../Views/Catalogo/catalogoSeries.html">SÉRIES</a>
-                <a class="nav-link nav-mais" href="">MAIS</a>
-            </nav>
+            <div>
+                <div id="lupa" onclick="action()">
+                    <a class="nav-link nav-masterhead nav-inicio active" href="">INÍCIO</a>
+                    <a class="nav-link nav-filmes" href="../../Views/Catalogo/catalogoFilmes.html">FILMES</a>
+                    <a class="nav-link nav-series" href="../../Views/Catalogo/catalogoSeries.html">SÉRIES</a>
+                    <a class="nav-link nav-mais" href="">MAIS</a>
+                </div>
+            </div>
 
             <div>
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass lupa fa-2x"></i>
+                </a>
+                
                 <img class="logo" src="../../img/monkerstitulo.png">
             </div>
 
             <div>
-                <i class="fa-solid fa-magnifying-glass lupa fa-2x"></i>
                 <img class="perfil" src="../../img/foto-perfil.png">
             </div>
         </header>

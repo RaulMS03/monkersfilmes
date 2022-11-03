@@ -117,6 +117,10 @@ header {
     top: 74.17%;
     bottom: 93.87%;
 
+    color: rgba(141, 141, 141, 0.78);
+}
+
+.lupa:active, .lupa:hover {
     color: #FFFFFF;
 }
 

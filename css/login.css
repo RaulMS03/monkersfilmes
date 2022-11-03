@@ -145,3 +145,23 @@ body {
 .form-control::-ms-input-placeholder {
   color: red;
 }
+
+.fa-chevron-left {
+  position: absolute;
+  left: -900px;
+  right: 26.81%;
+  top: 4.37%;
+  bottom: 85.28%;
+
+  font-family: 'Jockey One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 56px;
+
+  color: rgba(156, 156, 156, 0.78);
+}
+
+.fa-chevron-left:hover {
+  color: #FFFFFF;
+}

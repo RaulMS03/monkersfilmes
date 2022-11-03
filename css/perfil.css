@@ -1,0 +1,245 @@
+body {
+    background-image: url(../img/imagemFundo.png);
+}
+
+.fa-chevron-left {
+    position: absolute;
+    left: 6.53%;
+    right: 26.81%;
+    top: 10.37%;
+    bottom: 85.28%;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+
+    color: rgba(156, 156, 156, 0.78);
+}
+
+.fa-chevron-left:hover {
+    color: #FFFFFF;
+}
+
+.titulo {
+    position: absolute;
+    left: 9.53%;
+    right: 26.81%;
+    top: 5.37%;
+    bottom: 85.28%;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+}
+
+.perfil {
+    position: absolute;
+    width: 190px;
+    height: 194px;
+    left: 94px;
+    top: 280px;
+}
+
+.titulo-1 {
+    position: absolute;
+    width: 115px;
+    height: 60px;
+    left: 315px;
+    top: 240px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+}
+
+.retangulo {
+    position: absolute;
+    width: 392px;
+    height: 74px;
+    left: 311px;
+    top: 350px;
+
+    background: #1E1E1E;
+    box-shadow: inset 8px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+}
+
+.nome {
+    position: absolute;
+    width: 351px;
+    height: 74px;
+    left: 20px;
+    top: -30px;
+
+    font-family: 'Jaldi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 68px;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.titulo-2 {
+    position: absolute;
+    width: 490px;
+    height: 60px;
+    left: 100px;
+    top: 550px;
+
+    font-family: 'Jockey One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+}
+
+.perfil-1 {
+    position: absolute;
+    width: 190px;
+    height: 194px;
+    left: 100px;
+    top: 700px;
+}
+
+.perfil-2 {
+    position: absolute;
+    width: 190px;
+    height: 194px;
+    left: 350px;
+    top: 700px;
+}
+
+.perfil-3 {
+    position: absolute;
+    width: 190px;
+    height: 194px;
+    left: 600px;
+    top: 700px;
+}
+
+.perfil-4 {
+    position: absolute;
+    width: 190px;
+    height: 194px;
+    left: 850px;
+    top: 700px;
+}
+
+.perfil-5 {
+    position: absolute;
+    width: 190px;
+    height: 194px;
+    left: 1100px;
+    top: 700px;
+}
+
+footer {
+    position: absolute;
+    width: 1670px;
+    height: 274px;
+    left: -77px;
+    top: 1000px;
+
+    background: rgba(98, 4, 3, 0.69);
+    box-shadow: -2px -10px 21px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-6 {
+    position: absolute;
+    width: 497px;
+    height: 52px;
+    left: 190px;
+    top: 40px;
+
+    font-family: 'Jaldi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 41px;
+
+    color: #ffffff;
+}
+
+.fa-linkedin {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    left: 340px;
+    top: 110px;
+
+    color: #FFFFFF;
+}
+
+.fa-linkedin:hover {
+    color: #007bb6;
+}
+
+.novidades {
+    position: absolute;
+    width: 608px;
+    height: 32px;
+    left: 950px;
+    top: 40px;
+
+    font-family: 'Jaldi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+}
+
+.email {
+    position: absolute;
+    width: 493px;
+    height: 53px;
+    left: 910px;
+    top: 120px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+    background: #1E1E1E;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+}
+
+::placeholder {
+ position: absolute;
+ top: 13px;
+ left: 50px;
+ font-family: 'Jost';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 28px;
+ line-height: 40px;
+
+ color: rgba(255, 255, 255, 0.28);
+}
+
+.copyright { 
+    position: absolute;
+    top: 200px;
+    left: 780px;
+
+    font-family: 'Jockey One';
+    font-size: 20px;
+    color: #646464;
+}
