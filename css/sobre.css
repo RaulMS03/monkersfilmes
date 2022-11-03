@@ -39,8 +39,11 @@ body {
 }
   
 img{
-  width: 50px;
-  margin-bottom: 25px;
+  position: absolute;
+  width: 364px;
+  height: 366px;
+  left: 570px;
+  top: -80px;
 }
 
 .monker {
@@ -48,7 +51,7 @@ img{
   width: 720px;
   height: 105px;
   left: 360px;
-  top: 150px;
+  top: 200px;
 
   font-family: 'Jockey One';
   font-style: normal;
@@ -64,7 +67,7 @@ img{
   width: 705px;
   height: 119px;
   left: 368px;
-  top: 250px;
+  top: 300px;
   
   font-family: 'Jaldi';
   font-style: normal;
@@ -129,7 +132,7 @@ img{
   width: 85px;
   height: 85px;
   left: 334px;
-  top: 400px;
+  top: 450px;
 }
 
 .anaCris {
@@ -137,7 +140,7 @@ img{
   width: 118px;
   height: 40px;
   left: 318px;
-  top: 485px;
+  top: 530px;
 
   font-family: 'Jockey One';
   font-style: normal;
@@ -157,7 +160,7 @@ img{
   width: 85px;
   height: 85px;
   left: 520px;
-  top: 400px;
+  top: 450px;
 }
 
 .diogoGabardo {
@@ -165,7 +168,7 @@ img{
   width: 145px;
   height: 40px;
   left: 490px;
-  top: 485px;
+  top: 530px;
 
   font-family: 'Jockey One';
   font-style: normal;
@@ -185,7 +188,7 @@ img{
   width: 85px;
   height: 85px;
   left: 707px;
-  top: 400px;
+  top: 450px;
 }
 
 .ericVieira {
@@ -193,7 +196,7 @@ img{
   width: 102px;
   height: 35px;
   left: 700px;
-  top: 485px;
+  top: 530px;
 
   font-family: 'Jockey One';
   font-style: normal;
@@ -213,7 +216,7 @@ img{
   width: 85px;
   height: 85px;
   left: 876px;
-  top: 400px;
+  top: 450px;
 }
 
 .raulMasc {
@@ -221,7 +224,7 @@ img{
   width: 177px;
   height: 30px;
   left: 837px;
-  top: 485px;
+  top: 530px;
 
   font-family: 'Jockey One';
   font-style: normal;
@@ -241,7 +244,7 @@ img{
   width: 85px;
   height: 85px;
   left: 1062px;
-  top: 400px;
+  top: 450px;
 }
 
 .tonyBryan {
@@ -249,7 +252,7 @@ img{
   width: 110px;
   height: 35px;
   left: 1050px;
-  top: 485px;
+  top: 530px;
 
   font-family: 'Jockey One';
   font-style: normal;
