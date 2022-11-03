@@ -4,7 +4,7 @@ body {
 
 header {
     position: absolute;
-    width: 1560px;
+    width: 1601px;
     height: 198px;
     left: 0px;
     top: -9px;
@@ -136,7 +136,7 @@ header {
     position: absolute;
     left: 1.94%;
     right: 34.17%;
-    top: .29%;
+    top: 25.29%;
     bottom: 87.32%;
 
     font-family: 'Jockey One';
@@ -162,6 +162,46 @@ header {
     line-height: 42px;
 
     color: #ffffff;
+}
+
+.container-1 {
+     position: relative;
+     
+}
+
+
+
+.seta-direita {
+    position: absolute;
+    width: 2vw;
+    height: 28vh;
+    left: auto;
+    right: 0;
+    top: 430px;
+    background: linear-gradient(to right, transparent 0%, black 200% );
+    opacity: 0.1;
+    transition: all 300ms ease-in-out;
+}
+
+.seta-direita:hover {
+    opacity: 1;
+}
+
+.seta-esquerda {
+    position: absolute;
+    width: 2vw;
+    height: 28vh;
+    left: 0px;
+    right: auto;
+    top: 430px;
+    background: linear-gradient(to left, transparent 0%, black 200% );
+    opacity: 0.1;
+    transition: all 300ms ease-in-out;
+
+}
+
+.seta-esquerda:hover {
+    opacity: 1;
 }
 
 .retangulo-1 {
@@ -471,7 +511,7 @@ header {
 
 footer {
     position: absolute;
-    width: 1640px;
+    width: 1670px;
     height: 274px;
     left: -77px;
     top: 2576px;
