@@ -4,7 +4,7 @@ body {
 
 header {
     position: absolute;
-    width: 1601px;
+    width: 1560px;
     height: 198px;
     left: 0px;
     top: -9px;
@@ -136,7 +136,7 @@ header {
     position: absolute;
     left: 1.94%;
     right: 34.17%;
-    top: 25.29%;
+    top: .29%;
     bottom: 87.32%;
 
     font-family: 'Jockey One';
@@ -471,7 +471,7 @@ header {
 
 footer {
     position: absolute;
-    width: 1670px;
+    width: 1640px;
     height: 274px;
     left: -77px;
     top: 2576px;

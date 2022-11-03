@@ -1,0 +1,13 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fa-2x {
+        font-size: 2em;
+    }
+
+    .fa-chevron-left {
+        position: absolute;
+        left: -500px;
+        right: 26.81%;
+        top: 4.37%;
+        bottom: 85.28%;
+    }
+}
