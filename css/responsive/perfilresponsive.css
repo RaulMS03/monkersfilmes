@@ -1,0 +1,115 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fa-2x {
+        font-size: 2em;
+    }
+
+    .fa-chevron-left {
+        display: block;
+        position: absolute;
+        left: 30px;
+        right: 26.81%;
+        top: 10.2%;
+        bottom: 85.28%;
+    }
+
+    .titulo {
+        position: absolute;
+        left: 9.53%;
+        right: 26.81%;
+        top: 8.7%;
+        bottom: 85.28%;
+        font-family: 'Jockey One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+    footer {
+        position: absolute;
+        width: 1670px;
+        height: 274px;
+        left: -77px;
+        top: 1900px;
+        background: rgba(98, 4, 3, 0.69);
+        box-shadow: -2px -10px 21px rgb(0 0 0 / 25%);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .fa-2x {
+        font-size: 2em;
+    }
+
+    .fa-chevron-left {
+        position: absolute;
+        left: 30px;
+        right: 26.81%;
+        top: 10.2%;
+        bottom: 85.28%;
+    }
+
+    .titulo {
+        position: absolute;
+        left: 6.53%;
+        right: 26.81%;
+        top: 7.8%;
+        bottom: 85.28%;
+        font-family: 'Jockey One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+    footer {
+        position: absolute;
+        width: 1670px;
+        height: 274px;
+        left: -77px;
+        top: 2000px;
+        background: rgba(98, 4, 3, 0.69);
+        box-shadow: -2px -10px 21px rgb(0 0 0 / 25%);
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1440px)  {
+    .fa-2x {
+        font-size: 2em;
+    }
+
+    .fa-chevron-left {
+        position: absolute;
+        left: 30px;
+        right: 26.81%;
+        top: 10.5%;
+        bottom: 85.28%;
+    }
+
+    .titulo {
+        position: absolute;
+        left: 6.53%;
+        right: 26.81%;
+        top: 8.1%;
+        bottom: 85.28%;
+        font-family: 'Jockey One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+    footer {
+        position: absolute;
+        width: 1670px;
+        height: 274px;
+        left: -77px;
+        top: 1320px;
+        background: rgba(98, 4, 3, 0.69);
+        box-shadow: -2px -10px 21px rgb(0 0 0 / 25%);
+    }
+
+}
