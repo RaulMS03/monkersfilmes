@@ -7,11 +7,10 @@ parametros.append('nm_usuario', 'brasileirr');
 fetch(url, {
     method: "POST",
     body: parametros,
-    mode: 'no-cors',
   })
   .then(function (response){ // pegando o resultado
     return response.json();
   }) 
   .then(function (data){
-    console.log(data);
+    console.log("Usuario cadastrado com sucesso: "+data.response);
   });
