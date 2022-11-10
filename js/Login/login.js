@@ -1,4 +1,4 @@
-const url = 'https://api-monkers-entertainment.000webhostapp.com/realizaLogin.php';
+const url = 'https://api-monkers-entertainment.000webhostapp.com/consultaLogin.php';
 const nmUsuario = 'brasileirr';
 const senhaUsuario = 'hello';
 const emailUsuario = 'hello@gmail.com';
