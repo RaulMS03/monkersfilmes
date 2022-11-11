@@ -1,24 +1,22 @@
-const url = 'https://api-monkers-entertainment.000webhostapp.com/consultaLogin.php';
-var nmUsuario = '';
-var emailUsuario = '';
-var senhaUsuario = '';
-
-function realizaLogin(){
+function validaDadosLogin(){
+    let nmUsuario = '';
+    let emailUsuario = '';
+    let senhaUsuario = '';
     let emailOuUsuario = document.getElementById("nome-ou-email-usuario").value;
+    
     if(emailOuUsuario.includes("@")){
-        console.log("É valido "+validaEmail(emailOuUsuario))
         if(validaEmail(emailOuUsuario)){
             emailUsuario = emailOuUsuario;
             senhaUsuario = document.getElementById("senha-usuario").value;
-            realizaRequisicao(nmUsuario, emailUsuario, senhaUsuario);
+            consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario);
         } else {
-            document.getElementById("alerta-login").innerText = 'Certifique-se de colocar um e-mail válido';
+            document.getElementById("alerta-login").innerText = 'Certifique-se de colocar um e-mail válido.';
             document.getElementById('alerta-login').style.display = 'Block';
         }
     } else {
         nmUsuario = emailOuUsuario;
         senhaUsuario = document.getElementById("senha-usuario").value;
-        realizaRequisicao(nmUsuario, emailUsuario, senhaUsuario)
+        consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario)
     }
 }
 
@@ -34,7 +32,9 @@ function validaEmail(email){
         return false;
 }
 
-function realizaRequisicao(nmUsuario, emailUsuario, senhaUsuario, ){
+function consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario, ){
+    const url = 'https://api-monkers-entertainment.000webhostapp.com/consultaLogin.php';
+    
     fetch(`${url}?nm_usuario=${nmUsuario}&senha_usuario=${senhaUsuario}&email_usuario=${emailUsuario}`, {
             method: "GET",
         }).then(function(response) { 
@@ -42,11 +42,24 @@ function realizaRequisicao(nmUsuario, emailUsuario, senhaUsuario, ){
         }).then(function(data) {
             if(data.response == "True"){
                 document.getElementById('alerta-login').style.display = 'none';
-                document.getElementById("sucesso-login").innerText = 'Sucesso ao logar.';
-                document.getElementById('sucesso-login').style.display = 'Block';
+                document.getElementById('sucesso-login').innerText = 'Sucesso ao logar.';
+                document.getElementById('sucesso-login').style.display = 'block';
             } else if (data.response == "False") {
-                document.getElementById("alerta-login").innerText = 'Usário ou senha incorrentos.';
-                document.getElementById('alerta-login').style.display = 'Block'; 
+                document.getElementById('alerta-login').innerText = 'Usuário ou senha incorretos.';
+                document.getElementById('alerta-login').style.display = 'block'; 
             }
         });
 }
+
+addEventListener('load', () => {
+    if(sessionStorage.getItem('senhaUsuario')){
+        let emailUsuario = sessionStorage.getItem('emailUsuario');
+        let senhaUsuario = sessionStorage.getItem('senhaUsuario');
+        
+        document.getElementById('nome-ou-email-usuario').value = emailUsuario;
+        document.getElementById('senha-usuario').value = senhaUsuario ;
+
+        sessionStorage.removeItem('emailUsuario');
+        sessionStorage.removeItem('senhaUsuario');
+    }
+});
