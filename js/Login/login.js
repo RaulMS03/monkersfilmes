@@ -44,6 +44,14 @@ function consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario, ){
                 document.getElementById('alerta-login').style.display = 'none';
                 document.getElementById('sucesso-login').innerText = 'Sucesso ao logar.';
                 document.getElementById('sucesso-login').style.display = 'block';
+                dadosLogin = data.data;
+                localStorage.setItem('cd_usuario', dadosLogin['cd_usuario']);
+                localStorage.setItem('nome_usuario', dadosLogin['nome_usuario']);
+                localStorage.setItem('email_usuario', dadosLogin['email_usuario']);
+                localStorage.setItem('senha_usuario', dadosLogin['senha_usuario']);
+                localStorage.setItem('cd_foto_perfil', dadosLogin['cd_foto_perfil']);
+                localStorage.setItem('url_foto_perfil', dadosLogin['url_foto_perfil']);
+                window.location.href = "../Catalogo/catalogo.html";
             } else if (data.response == "False") {
                 document.getElementById('alerta-login').innerText = 'Usuário ou senha incorretos.';
                 document.getElementById('alerta-login').style.display = 'block'; 
