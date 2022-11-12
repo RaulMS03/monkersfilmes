@@ -32,7 +32,7 @@ function validaEmail(email){
         return false;
 }
 
-function consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario, ){
+function consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario){
     const url = 'https://api-monkers-entertainment.000webhostapp.com/consultaLogin.php';
     
     fetch(`${url}?nm_usuario=${nmUsuario}&senha_usuario=${senhaUsuario}&email_usuario=${emailUsuario}`, {
