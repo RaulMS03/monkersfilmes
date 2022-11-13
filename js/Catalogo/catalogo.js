@@ -118,7 +118,7 @@ addEventListener('load', () => {
         });
 
     } else {
-        window.location.href = '../Login/login.html'
+        window.location.href = '../Login/login.html';
     }
 });
 

@@ -23,7 +23,7 @@ function validaDadosUsuario (){
 }
 
 function cadastraUsuario(nomeUsuario, emailUsuario, senhaUsuario){
-  const url = 'https://api-monkers-entertainment.000webhostapp.com/cadastraUsuario.php';
+  const url = 'http://api-monkers-entertainment.coolpage.biz/get/cadastraUsuario.php';
   
   let parametros = new FormData();
   
