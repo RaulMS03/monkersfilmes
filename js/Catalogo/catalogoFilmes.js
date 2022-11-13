@@ -1,114 +1,72 @@
-
 addEventListener('load', () => {
-    /*
     if(localStorage.getItem('url_foto_perfil')){
-        let nomeUsuario = localStorage.getItem('nome_usuario');
         let urlFotoPerfil = localStorage.getItem('url_foto_perfil');
 
-
-        localStorage.removeItem('cd_usuario');
-        localStorage.removeItem('nome_usuario');
-        localStorage.removeItem('email_usuario');
-        localStorage.removeItem('senha_usuario');
-        localStorage.removeItem('cd_foto_perfil');
-        localStorage.removeItem('url_foto_perfil');
-
-        document.getElementById('b-nome-usuario').innerText = nomeUsuario;
         document.getElementById('img-foto-perfil').src = urlFotoPerfil;
 
+        // salva os dados das tendencias de filmes da semana
+        let data = consultaTendenciasTMDB('week');
 
+        data.then(promise => {
+            data = promise['results'].slice(0, 4);
+            
+            let idFilme = data[0]['id'];
+            let posterFilme = `https://image.tmdb.org/t/p/w500${data[0]['backdrop_path']}`;
+
+            let imgElement = document.getElementById('destaque');
+            imgElement.src = posterFilme;
+            imgElement.alt = idFilme;
+        });
+
+        data = consultaPorGenero('16');
+
+        data.then(promise => {
+            atribuiDadosFilmes(promise, 'animacao')   
+        });
+
+        data = consultaPorGenero('27');
+
+        data.then(promise => {
+            atribuiDadosFilmes(promise, 'terror');
+        });
+
+        data = consultaPorGenero('36');
+
+        data.then(promise => {
+            atribuiDadosFilmes(promise, 'historia');  
+        });
+
+        data = consultaPorGenero('10749');
+
+        data.then(promise => {
+            atribuiDadosFilmes(promise, 'romance');
+        });
 
     } else {
         window.location.href = '../Login/login.html'
     }
-    */
-
-    // salva os dados das tendencias de filmes da semana
-    let data = consultaTendenciasTMDB('week');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let idFilme = data[0]['id'];
-        let posterFilme = `https://image.tmdb.org/t/p/w500${data[0]['backdrop_path']}`;
-
-        let imgElement = document.getElementById('destaque');
-        imgElement.src = posterFilme;
-        imgElement.alt = idFilme;
-    });
-
-    data = consultaPorGenero('16');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterSerie = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`animacao-${index+1}`);
-            imgElement.src = posterSerie;
-            imgElement.alt = idEntreterimento;
-            
-            index++;
-        }    
-    });
-
-    data = consultaPorGenero('27');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterSerie = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`terror-${index+1}`);
-            imgElement.src = posterSerie;
-            imgElement.alt = idEntreterimento;
-            
-            index++;
-        }    
-    });
-
-    data = consultaPorGenero('36');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterSerie = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`historia-${index+1}`);
-            imgElement.src = posterSerie;
-            imgElement.alt = idEntreterimento;
-            
-            index++;
-        }    
-    });
-
-    data = consultaPorGenero('10749');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterSerie = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`romance-${index+1}`);
-            imgElement.src = posterSerie;
-            imgElement.alt = idEntreterimento;
-            
-            index++;
-        }    
-    });
 });
+
+function atribuiDadosFilmes(promise, idFoto){
+    data = promise['results'].slice(0, 4);
+            
+    let index = 0;
+    while(index < data.length){
+        let idFilme = data[index]['id'];
+        let posterFilme = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+        let imgElement = document.getElementById(`${idFoto}-${index+1}`);
+        
+        imgElement.alt = idFilme;
+        if(posterFilme){
+            imgElement.src = `https://image.tmdb.org/t/p/w500${posterFilme}`;
+        } else {
+            imgElement.className = 'img-nao-encontrada';
+            imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
+        }
+        
+        index++;
+    }  
+}
 
 // timeWindow -> tempo que esta em tendencia -> day, week.
 function consultaTendenciasTMDB(timeWindow){

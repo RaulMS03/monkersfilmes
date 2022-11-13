@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Jaldi&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/90438f02e0.js" crossorigin="anonymous"></script>
         <Script src="../../js/Catalogo/catalogoFilmes.js"></Script>
+        <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css">
     </head>
 
     <body>
@@ -33,8 +34,20 @@
                 <a href="">
                     <i class="fa-solid fa-magnifying-glass lupa fa-2x"></i>
                 </a>
-                
-                <img class="perfil" src="../../img/foto-perfil.png">
+                <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-perfil dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../../img/foto-perfil.png" alt="foto-perfil" width="32" height="32" class="rounded-circle perfil" id="img-foto-perfil">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow menu-perfil">
+                            <li><a class="dropdown-item" href="../../Views/Perfil/perfil.html">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><a class="dropdown-item" href="#">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../../Views/Login/login.html" id="menu-sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -132,5 +145,8 @@
 
             <p class="copyright">&copy; Monker's 2022</p>
         </footer>
+
+        <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../../js/menu.js"></script>
     </body>
 </html>

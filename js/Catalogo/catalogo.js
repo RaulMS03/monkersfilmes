@@ -1,23 +1,13 @@
-
 addEventListener('load', () => {
     if(localStorage.getItem('url_foto_perfil')){
-        let nomeUsuario = localStorage.getItem('nome_usuario');
         let urlFotoPerfil = localStorage.getItem('url_foto_perfil');
 
-        localStorage.removeItem('cd_usuario');
-        localStorage.removeItem('nome_usuario');
-        localStorage.removeItem('email_usuario');
-        localStorage.removeItem('senha_usuario');
-        localStorage.removeItem('cd_foto_perfil');
-        localStorage.removeItem('url_foto_perfil');
-
-        document.getElementById('b-nome-usuario').innerText = nomeUsuario;
         document.getElementById('img-foto-perfil').src = urlFotoPerfil;
 
         // salva os dados das tendencias de filmes da semana
         let data = consultaTendenciasTMDB('movie', 'week');
 
-        data.then( promise => {
+        data.then(promise => {
             data = promise['results'].slice(0, 4);
             
             let index = 0;
@@ -36,7 +26,7 @@ addEventListener('load', () => {
         // salva os dados das tendencias de series da semana
         data = consultaTendenciasTMDB('tv', 'week');
 
-        data.then( promise => {
+        data.then(promise => {
             data = promise['results'].slice(0, 4);
             
             let index = 0;
@@ -61,7 +51,7 @@ addEventListener('load', () => {
         // se for 0 entao sera listado os filmes, se for 1 sera listado as series
         data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '80');
 
-        data.then( promise => {
+        data.then(promise => {
             data = promise['results'].slice(0, 4);
             
             let index = 0;
@@ -79,7 +69,7 @@ addEventListener('load', () => {
 
         data = consultaAtualizacoesDaSemana();
 
-        data.then( promise => {
+        data.then(promise => {
             data = promise['results'].slice(0, 4);
             
             let index = 0;
@@ -111,7 +101,7 @@ addEventListener('load', () => {
 
         data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '99');
 
-        data.then( promise => {
+        data.then(promise => {
             data = promise['results'].slice(0, 4);
             
             let index = 0;
