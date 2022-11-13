@@ -1,10 +1,8 @@
 
 addEventListener('load', () => {
-    /*
     if(localStorage.getItem('url_foto_perfil')){
         let nomeUsuario = localStorage.getItem('nome_usuario');
         let urlFotoPerfil = localStorage.getItem('url_foto_perfil');
-
 
         localStorage.removeItem('cd_usuario');
         localStorage.removeItem('nome_usuario');
@@ -16,125 +14,122 @@ addEventListener('load', () => {
         document.getElementById('b-nome-usuario').innerText = nomeUsuario;
         document.getElementById('img-foto-perfil').src = urlFotoPerfil;
 
+        // salva os dados das tendencias de filmes da semana
+        let data = consultaTendenciasTMDB('movie', 'week');
 
+        data.then( promise => {
+            data = promise['results'].slice(0, 4);
+            
+            let index = 0;
+            while(index < data.length){
+                let idFilme = data[index]['id'];
+                let posterFilme = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+
+                let imgElement = document.getElementById(`filme-${index+1}`);
+                imgElement.src = posterFilme;
+                imgElement.alt = idFilme;
+                
+                index++;
+            }
+        });
+
+        // salva os dados das tendencias de series da semana
+        data = consultaTendenciasTMDB('tv', 'week');
+
+        data.then( promise => {
+            data = promise['results'].slice(0, 4);
+            
+            let index = 0;
+            while(index < data.length){
+                let idSerie = data[index]['id'];
+                let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+
+                let imgElement = document.getElementById(`serie-${index+1}`);
+                imgElement.src = posterEntreterimento;
+                imgElement.alt = idSerie;
+                
+                index++;
+            }    
+        });
+
+        mediaType = [
+            'movie',
+            'tv'
+        ];
+
+        // gera um indice randomico entre 0 e 1.
+        // se for 0 entao sera listado os filmes, se for 1 sera listado as series
+        data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '80');
+
+        data.then( promise => {
+            data = promise['results'].slice(0, 4);
+            
+            let index = 0;
+            while(index < data.length){
+                let idEntreterimento = data[index]['id'];
+                let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+
+                let imgElement = document.getElementById(`crime-${index+1}`);
+                imgElement.src = posterEntreterimento;
+                imgElement.alt = idEntreterimento;
+                
+                index++;
+            }    
+        });
+
+        data = consultaAtualizacoesDaSemana();
+
+        data.then( promise => {
+            data = promise['results'].slice(0, 4);
+            
+            let index = 0;
+            let indexId = 0;
+            while(index < data.length){
+                let idEntreterimento = data[index]['id'];
+                let posterEntreterimento;
+                let dadosFilme = consultaDadosPorId('movie', idEntreterimento);
+
+                dadosFilme.then(promise => {
+                    return promise;
+                }).then(jsonData => {
+                    posterEntreterimento = jsonData['poster_path']; 
+                }).then(() => {
+                    let imgElement = document.getElementById(`atualizacao-${indexId+1}`);
+                    imgElement.alt = idEntreterimento;
+                    if(posterEntreterimento){
+                        imgElement.src = `https://image.tmdb.org/t/p/w500${posterEntreterimento}`;
+                    } else {
+                        imgElement.className = 'img-nao-encontrada';
+                        imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
+                    }
+                    indexId++;
+                })
+
+                index++;
+            }    
+        });
+
+        data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '99');
+
+        data.then( promise => {
+            data = promise['results'].slice(0, 4);
+            
+            let index = 0;
+            while(index < data.length){
+                let idEntreterimento = data[index]['id'];
+                let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+
+                let imgElement = document.getElementById(`documentario-${index+1}`);
+                imgElement.src = posterEntreterimento;
+                imgElement.alt = idEntreterimento;
+                
+                index++;
+            }    
+        });
 
     } else {
         window.location.href = '../Login/login.html'
     }
-    */
-
-    // salva os dados das tendencias de filmes da semana
-    let data = consultaTendenciasTMDB('movie', 'week');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idFilme = data[index]['id'];
-            let posterFilme = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`filme-${index+1}`);
-            imgElement.src = posterFilme;
-            imgElement.alt = idFilme;
-            
-            index++;
-        }
-    });
-
-    // salva os dados das tendencias de series da semana
-    data = consultaTendenciasTMDB('tv', 'week');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idSerie = data[index]['id'];
-            let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`serie-${index+1}`);
-            imgElement.src = posterEntreterimento;
-            imgElement.alt = idSerie;
-            
-            index++;
-        }    
-    });
-
-    mediaType = [
-        'movie',
-        'tv'
-    ];
-
-    // gera um indice randomico entre 0 e 1.
-    // se for 0 entao sera listado os filmes, se for 1 sera listado as series
-    data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '80');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`crime-${index+1}`);
-            imgElement.src = posterEntreterimento;
-            imgElement.alt = idEntreterimento;
-            
-            index++;
-        }    
-    });
-
-    data = consultaAtualizacoesDaSemana();
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        let indexId = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterEntreterimento;
-            let dadosFilme = consultaDadosPorId('movie', idEntreterimento);
-
-            dadosFilme.then(promise => {
-                return promise;
-            }).then(jsonData => {
-                posterEntreterimento = jsonData['poster_path']; 
-            }).then(() => {
-                let imgElement = document.getElementById(`atualizacao-${indexId+1}`);
-                imgElement.alt = idEntreterimento;
-                if(posterEntreterimento){
-                    imgElement.src = `https://image.tmdb.org/t/p/w500${posterEntreterimento}`;
-                } else {
-                    imgElement.className = 'img-nao-encontrada';
-                    imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
-                }
-                indexId++;
-            })
-
-            index++;
-        }    
-    });
-
-    data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '99');
-
-    data.then( promise => {
-        data = promise['results'].slice(0, 4);
-        
-        let index = 0;
-        while(index < data.length){
-            let idEntreterimento = data[index]['id'];
-            let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-            let imgElement = document.getElementById(`documentario-${index+1}`);
-            imgElement.src = posterEntreterimento;
-            imgElement.alt = idEntreterimento;
-            
-            index++;
-        }    
-    });
 });
 
 // mediaType -> tipo de midia: all, movie, tv e person.
