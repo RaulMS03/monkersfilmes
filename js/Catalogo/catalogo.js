@@ -118,7 +118,7 @@ addEventListener('load', () => {
         }    
     });
 
-    data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '27');
+    data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '99');
 
     data.then( promise => {
         data = promise['results'].slice(0, 4);
@@ -128,7 +128,7 @@ addEventListener('load', () => {
             let idEntreterimento = data[index]['id'];
             let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
 
-            let imgElement = document.getElementById(`terror-${index+1}`);
+            let imgElement = document.getElementById(`documentario-${index+1}`);
             imgElement.src = posterEntreterimento;
             imgElement.alt = idEntreterimento;
             
