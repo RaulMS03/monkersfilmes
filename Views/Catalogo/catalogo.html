@@ -10,20 +10,22 @@
         <link rel="icon" href ="../../img/logoMonkers.png"/>
         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Jaldi&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/90438f02e0.js" crossorigin="anonymous"></script>
-        <!--<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">-->
+        <Script Src="../../js/Catalogo/catalogo.js"></Script>
+        <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css">
     </head>
 
     <body>
         <header>
             <div>
                 <div id="lupa" onclick="action()">
-                    <a class="nav-link nav-masterhead nav-inicio active" href="">INÍCIO</a>
-                    <a class="nav-link nav-filmes" href="../../Views/Catalogo/catalogoFilmes.html">FILMES</a>
-                    <a class="nav-link nav-series" href="../../Views/Catalogo/catalogoSeries.html">SÉRIES</a>
-                    <a class="nav-link nav-mais" href="">MAIS</a>
+                    <a class="nav-masterhead nav-inicio active" href="">INÍCIO</a>
+                    <a class="nav-filmes" href="../../Views/Catalogo/catalogoFilmes.html">FILMES</a>
+                    <a class="nav-series" href="../../Views/Catalogo/catalogoSeries.html">SÉRIES</a>
+                    <a class="nav-mais" href="">MAIS</a>
                 </div>
             </div>
 
@@ -35,58 +37,116 @@
                 <a href="">
                     <i class="fa-solid fa-magnifying-glass lupa fa-2x"></i>
                 </a>
-
-                <img class="perfil" src="../../img/foto-perfil.png">
+                <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-perfil dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../../img/foto-perfil.png" alt="foto-perfil" width="32" height="32" class="rounded-circle perfil" id="img-foto-perfil">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow menu-perfil">
+                            <li><a class="dropdown-item" href="../../Views/Perfil/perfil.html">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../../Views/Login/login.html" id="menu-sair">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
 
         <main>
-            <h1 class="titulo">OLÁ ******, O QUE VAMOS VER HOJE?</h1>
-            
-            <nav>
-                <P class="texto-1">MAIS ASSISTIDOS NO MOMENTO🔥</P>
-                <div class="retangulo-1"></div>
-                <div class="retangulo-2"></div>
-                <div class="retangulo-3"></div>
-                <div class="retangulo-4"></div>
-                <div class="retangulo-5"></div>
-            </nav>
+            <h1 class="titulo">OLÁ <b id="b-nome-usuario">******</b>, O QUE VAMOS VER HOJE?</h1>
 
-            <nav>
-                <p class="titulo-2">XXXXXXXXXXXXXXX</p>
-                <div class="retangulo-6"></div>
-                <div class="retangulo-7"></div>
-                <div class="retangulo-8"></div>
-                <div class="retangulo-9"></div>
-                <div class="retangulo-10"></div>
-            </nav>
+            <div>
+                <P class="texto-1">FILMES MAIS ASSISTIDOS NO MOMENTO🔥</P>
+                <div class="container-1">
+                    <button class="seta-esquerda">◀</button>
+                    <button class="seta-direita">▶</button>
+                    <div class="retangulo-1">
+                        <img id="filme-1" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-2">
+                        <img id="filme-2" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-3">
+                        <img id="filme-3" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-4">
+                        <img id="filme-4" class="img-poster"/>
+                    </div>
+                </div>
+            </div>
 
-            <nav>
-                <p class="titulo-3">XXXXXXXXXXXXXXX</p>
-                <div class="retangulo-11"></div>
-                <div class="retangulo-12"></div>
-                <div class="retangulo-13"></div>
-                <div class="retangulo-14"></div>
-                <div class="retangulo-15"></div>
-            </nav>
+            <div>
+                <p class="titulo-2">SÉRIES MAIS ASSISTIDAS NO MOMENTO🔥</p>
+                <div class="container-2">
+                    <div class="retangulo-6">
+                        <img id="serie-1" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-7">
+                        <img id="serie-2" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-8">
+                        <img id="serie-3" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-9">
+                        <img id="serie-4" class="img-poster"/>
+                    </div>
+                </div>
+            </div>
 
-            <nav>
-                <p class="titulo-4">XXXXXXXXXXXXXXX</p>
-                <div class="retangulo-16"></div>
-                <div class="retangulo-17"></div>
-                <div class="retangulo-18"></div>
-                <div class="retangulo-19"></div>
-                <div class="retangulo-20"></div>
-            </nav>
+            <div>
+                <p class="titulo-3">CRIME</p>
+                <div class="container-3">
+                    <div class="retangulo-11">
+                        <img id="crime-1" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-12">
+                        <img id="crime-2" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-13">
+                        <img id="crime-3" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-14">
+                        <img id="crime-4" class="img-poster"/>
+                    </div>
+                </div>
+            </div>
 
-            <nav>
-                <p class="titulo-5">XXXXXXXXXXXXXXX</p>
-                <div class="retangulo-21"></div>
-                <div class="retangulo-22"></div>
-                <div class="retangulo-23"></div>
-                <div class="retangulo-24"></div>
-                <div class="retangulo-25"></div>
-            </nav>
+            <div>
+                <p class="titulo-4">ATUALIZAÇÕES DA SEMANA</p>
+                <div class="container-4">
+                    <div class="retangulo-16">
+                        <img id="atualizacao-1" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-17">
+                        <img id="atualizacao-2" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-18">
+                        <img id="atualizacao-3" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-19">
+                        <img id="atualizacao-4" class="img-poster"/>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="titulo-5">DOCUMENTÁRIO</p>
+                <div class="container-5">
+                    <div class="retangulo-21">
+                        <img id="documentario-1" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-22">
+                        <img id="documentario-2" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-23">
+                        <img id="documentario-3" class="img-poster"/>
+                    </div>
+                    <div class="retangulo-24">
+                        <img id="documentario-4" class="img-poster"/>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -109,5 +169,8 @@
 
             <p class="copyright">&copy; Monker's 2022</p>
         </footer>
+
+        <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../../js/menu.js"></script>
     </body>
 </html>

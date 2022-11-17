@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/90438f02e0.js" crossorigin="anonymous"></script>
-    
+    <Script Src="../../js/Cadastro/cadastro.js"></Script>
 
     <style>
       .bd-placeholder-img {
@@ -87,20 +87,27 @@
       </div>
 
         <div class="form-floating">
-            <input type="usuario" class="form-control" id="floatingUsuario" placeholder="username">
-            <label for="floatingUsuario">USUÁRIO</label>
+            <input type="usuario" class="form-control" id="nome-usuario" placeholder="Usuário">
+            <label for="nome-usuario">USUÁRIO</label>
           </div>
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">E-MAIL</label>
+          <input type="email" class="form-control" id="email-usuario" placeholder="Nome@exemplo.com">
+          <label for="email-usuario">E-MAIL</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">SENHA</label>
+          <input type="password" class="form-control" id="senha-usuario" placeholder="Senha">
+          <label for="senha-usuario">SENHA</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-entrar bg-branco" type="submit">CADASTRAR</button>    
+        <input type="button" class="w-100 btn btn-lg btn-entrar bg-branco" type="submit" value="CADASTRAR" onclick="validaDadosUsuario()"/>    
         
+        <div class="alert alert-danger" role="alert" style="display: none;" id="alerta-cadastro">
+          Nada por enquanto.
+        </div>
+        <div class="alert alert-success" role="alert" style="display: none;" id="sucesso-cadastro">
+          Nada por enquanto.
+        </div>
+
         <p class="footer">&copy; Monker's 2022</p>
       </form>
     </main>

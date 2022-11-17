@@ -77,7 +77,7 @@ body {
 
 }
 
-.form-signin input[type="email"] {
+.form-signin #nome-ou-email-usuario {
   margin-bottom: 10px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
