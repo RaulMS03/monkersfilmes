@@ -2,7 +2,7 @@
     .logo {
         width: 500px;
         position: absolute;
-        left: 30.96%;
+        left: 33.96%;
         right: 41.24%;
         top: 50.25%;
         bottom: 94.15%;
@@ -10,7 +10,7 @@
 
     .lupa {
         position: absolute;
-        left: 1430px;
+        left: 1260px;
         right: 6.74%;
         top: 74.17%;
         bottom: 93.87%;
@@ -21,7 +21,7 @@
         position: absolute;
         width: 38px;
         height: 34px;
-        left: 1485px;
+        left: 1320px;
         top: 143px;
     }
 
@@ -29,7 +29,7 @@
         position: absolute;
         left: 1.94%;
         right: 34.17%;
-        top: 13.29%;
+        top: 19.29%;
         bottom: 87.32%;
         font-family: 'Jockey One';
         font-style: normal;
@@ -44,7 +44,7 @@
     .logo {
         width: 500px;
         position: absolute;
-        left: 30.96%;
+        left: 33.96%;
         right: 41.24%;
         top: 50.25%;
         bottom: 94.15%;
@@ -52,7 +52,7 @@
 
     .lupa {
         position: absolute;
-        left: 1430px;
+        left: 1250px;
         right: 6.74%;
         top: 74.17%;
         bottom: 93.87%;
@@ -63,7 +63,7 @@
         position: absolute;
         width: 38px;
         height: 34px;
-        left: 1485px;
+        left: 1300px;
         top: 143px;
     }
 
@@ -113,7 +113,7 @@
         position: absolute;
         left: 1.94%;
         right: 34.17%;
-        top: 24.29%;
+        top: 13.29%;
         bottom: 87.32%;
         font-family: 'Jockey One';
         font-style: normal;
