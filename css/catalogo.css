@@ -4,7 +4,7 @@ body {
 
 header {
     position: absolute;
-    width: 1601px;
+    width: 1560px;
     height: 198px;
     left: 0px;
     top: -9px;
@@ -104,15 +104,15 @@ header {
     width: 500px;
 
     position: absolute;
-    left: 30.96%;
+    left: 33.96%;
     right: 41.24%;
-    top: -5.25%;
+    top: 50.25%;
     bottom: 94.15%;
 }
 
 .lupa{
     position: absolute;
-    left: 82.32%;
+    left: 92%;
     right: 6.74%;
     top: 74.17%;
     bottom: 93.87%;
@@ -126,6 +126,8 @@ header {
 
 .perfil {
     position: absolute;
+    width: 38px;
+    height: 34px;
     left: 1363px;
     top: 143px;
 }
@@ -134,7 +136,7 @@ header {
     position: absolute;
     left: 1.94%;
     right: 34.17%;
-    top: 25.29%;
+    top: .29%;
     bottom: 87.32%;
 
     font-family: 'Jockey One';
@@ -509,7 +511,7 @@ header {
 
 footer {
     position: absolute;
-    width: 1670px;
+    width: 1640px;
     height: 274px;
     left: -77px;
     top: 2576px;
