@@ -33,7 +33,7 @@ function validaEmail(email){
 }
 
 function consultaDadosLogin(nmUsuario, emailUsuario, senhaUsuario){
-    const url = 'http://api-monkers-entertainment.coolpage.biz/get/consultaLogin.php';
+    const url = 'https://monkers-entertainment-api.000webhostapp.com/get/consultaLogin.php';
     
     fetch(`${url}?nm_usuario=${nmUsuario}&senha_usuario=${senhaUsuario}&email_usuario=${emailUsuario}`, {
             method: "GET",

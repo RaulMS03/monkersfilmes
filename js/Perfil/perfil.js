@@ -29,7 +29,7 @@ addEventListener("load", () => {
 });
 
 function consultaDadosFtosPerfil(){
-    const url = 'http://api-monkers-entertainment.coolpage.biz/get/consultaFotosDePerfil.php';
+    const url = 'https://monkers-entertainment-api.000webhostapp.com/get/consultaFotosDePerfil.php';
     
     return fetch(url, {
             method: "GET",
