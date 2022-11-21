@@ -4,24 +4,33 @@ addEventListener('load', () => {
 
         document.getElementById('img-foto-perfil').src = urlFotoPerfil;
 
-        // salva os dados das tendencias de filmes da semana
+        // salva os dados das tendencias de series da semana
         let data = consultaTendenciasTMDB('week');
 
         data.then(promise => {
-            data = promise['results'].slice(0, 4);
+            data = promise['results'];
+
+            let imgFundoSerie = '';
+            let indiceSerie = '';
+
+            // so para de executar quando acha um serie com backdrop.
+            while (!imgFundoSerie) {
+                // gera um indice randomico para selecionar um serie que esta em destaque
+                indiceSerie = Math.floor(Math.random() * data.length);
+                imgFundoSerie = data[indiceSerie]['backdrop_path'];
+            }
             
-            let idSerie = data[0]['id'];
-            let posterSerie = `https://image.tmdb.org/t/p/w500${data[0]['backdrop_path']}`;
+            let idSerie = data[indiceSerie]['id'];
             let imgElement = document.getElementById('destaque');
-            
-            imgElement.alt = idSerie;
-            if(posterSerie){
-                imgElement.src = `https://image.tmdb.org/t/p/w500${posterSerie}`;
+
+            imgElement.alt = `tv-${idSerie}`;
+            if(imgFundoSerie){
+                imgFundoSerie = `https://image.tmdb.org/t/p/w500${data[indiceSerie]['backdrop_path']}`;
+                imgElement.src = imgFundoSerie;
             } else {
                 imgElement.className = 'img-nao-encontrada';
                 imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
             }
-
         });
 
         data = consultaPorGenero('16');
@@ -48,6 +57,19 @@ addEventListener('load', () => {
             atribuiDadosSeries(promise, 'romance');
         });
 
+        // pegando todas as ancoras (links/href/a) com este respectivo id.
+        let ancorasCatalogo = document.querySelectorAll('#detalhes-entreterimento');
+
+        ancorasCatalogo.forEach(ancoraCatalogo => {
+            ancoraCatalogo.addEventListener('click', () => {
+                // acessando o elemento 'img' e pegando o 'alt'.
+                let idEntreterimento = ancoraCatalogo.firstChild.nextElementSibling.alt;
+                tipoEntreterimento = idEntreterimento.split('-')[0];
+                idEntreterimento = idEntreterimento.split('-')[1];
+                sessionStorage.setItem('idEntreterimento', idEntreterimento);
+                sessionStorage.setItem('tipoEntreterimento', tipoEntreterimento);
+            })
+        });
     } else {
         window.location.href = '../Login/login.html'
     }
@@ -62,7 +84,7 @@ function atribuiDadosSeries(promise, idFoto){
         let posterSerie = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
         let imgElement = document.getElementById(`${idFoto}-${index+1}`);
         
-        imgElement.alt = idSerie;
+        imgElement.alt = `tv-${idSerie}`;
         if(posterSerie){
             imgElement.src = `https://image.tmdb.org/t/p/w500${posterSerie}`;
         } else {

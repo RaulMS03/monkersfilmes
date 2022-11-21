@@ -55,19 +55,7 @@ addEventListener('load', () => {
         data = consultaPorGenero(tipoEntreterimento, '80');
 
         data.then(promise => {
-            data = promise['results'].slice(0, 4);
-            
-            let index = 0;
-            while(index < data.length){
-                let idEntreterimento = data[index]['id'];
-                let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-                let imgElement = document.getElementById(`crime-${index+1}`);
-                imgElement.src = posterEntreterimento;
-                imgElement.alt = `${tipoEntreterimento}-${idEntreterimento}`;
-                
-                index++;
-            }    
+            atribuiDadosEntreterimento(tipoEntreterimento, promise, 'crime');   
         });
 
         data = consultaAtualizacoesDaSemana();
@@ -106,19 +94,7 @@ addEventListener('load', () => {
         data = consultaPorGenero(tipoEntreterimento, '99');
 
         data.then(promise => {
-            data = promise['results'].slice(0, 4);
-            console.log(promise);
-            let index = 0;
-            while(index < data.length){
-                let idEntreterimento = data[index]['id'];
-                let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
-
-                let imgElement = document.getElementById(`documentario-${index+1}`);
-                imgElement.src = posterEntreterimento;
-                imgElement.alt = `${tipoEntreterimento}-${idEntreterimento}`;
-                
-                index++;
-            }    
+            atribuiDadosEntreterimento(tipoEntreterimento, promise, 'documentario');      
         });
 
         // pegando todas as ancoras (links/href/a) com este respectivo id.
@@ -139,6 +115,27 @@ addEventListener('load', () => {
         window.location.href = '../Login/login.html';
     }
 });
+
+function atribuiDadosEntreterimento(mediaType, promise, idFoto){
+    data = promise['results'].slice(0, 4);
+            
+    let index = 0;
+    while(index < data.length){
+        let idEntreterimento = data[index]['id'];
+        let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+        let imgElement = document.getElementById(`${idFoto}-${index+1}`);
+        
+        imgElement.alt = `${mediaType}-${idEntreterimento}`;
+        if(posterEntreterimento){
+            imgElement.src = `https://image.tmdb.org/t/p/w500${posterEntreterimento}`;
+        } else {
+            imgElement.className = 'img-nao-encontrada';
+            imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
+        }
+        
+        index++;
+    }  
+}
 
 // mediaType -> tipo de midia: all, movie, tv e person.
 // timeWindow -> tempo que esta em tendencia -> day, week.
