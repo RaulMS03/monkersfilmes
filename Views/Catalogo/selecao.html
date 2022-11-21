@@ -15,13 +15,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Jaldi&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/90438f02e0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css">
+        <Script Src="../../js/Catalogo/selecao.js"></Script>
     </head>
 
     <body>
         <header>
             <div>
                 <div id="lupa" onclick="action()">
-                    <a class="nav-masterhead nav-inicio active" href="">INÍCIO</a>
+                    <a class="nav-masterhead nav-inicio active" href="../Catalogo/catalogo.html">INÍCIO</a>
                     <a class="nav-filmes" href="../../Views/Catalogo/catalogoFilmes.html">FILMES</a>
                     <a class="nav-series" href="../../Views/Catalogo/catalogoSeries.html">SÉRIES</a>
                     <a class="nav-mais" href="">MAIS</a>
@@ -54,11 +55,13 @@
 
        <main>
             <div>
-                <h1 class="titulo-1">Titulo</h1>
+                <h1 class="titulo-1" id="titulo-entreterimento">Titulo</h1>
 
-                <div class="retangulo-1"></div>
-                <p class="sinopse-1">DURAÇÃO-ANO-GENERO</p>
-                <p class="sinopse-2">Sinopse do filme</p>
+                <div class="retangulo-1">
+                    <img id="img-poster" class="img-poster"/>
+                </div>
+                <p class="sinopse-1" id="duracao-ano-genero">DURAÇÃO-ANO-GENERO</p>
+                <p class="sinopse-2" id="sinopse-entreterimento">Sinopse do filme</p>
             </div>
 
             <div>

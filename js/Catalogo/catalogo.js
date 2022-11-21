@@ -1,8 +1,10 @@
 addEventListener('load', () => {
     if(localStorage.getItem('url_foto_perfil')){
+        let nomeUsuario = localStorage.getItem('nome_usuario');
         let urlFotoPerfil = localStorage.getItem('url_foto_perfil');
 
         document.getElementById('img-foto-perfil').src = urlFotoPerfil;
+        document.getElementById('b-nome-usuario').innerText = nomeUsuario;
 
         // salva os dados das tendencias de filmes da semana
         let data = consultaTendenciasTMDB('movie', 'week');
@@ -17,7 +19,7 @@ addEventListener('load', () => {
 
                 let imgElement = document.getElementById(`filme-${index+1}`);
                 imgElement.src = posterFilme;
-                imgElement.alt = idFilme;
+                imgElement.alt = `movie-${idFilme}`;
                 
                 index++;
             }
@@ -36,7 +38,7 @@ addEventListener('load', () => {
 
                 let imgElement = document.getElementById(`serie-${index+1}`);
                 imgElement.src = posterEntreterimento;
-                imgElement.alt = idSerie;
+                imgElement.alt = `tv-${idSerie}`;
                 
                 index++;
             }    
@@ -49,7 +51,8 @@ addEventListener('load', () => {
 
         // gera um indice randomico entre 0 e 1.
         // se for 0 entao sera listado os filmes, se for 1 sera listado as series
-        data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '80');
+        let tipoEntreterimento = mediaType[Math.floor(Math.random() * 2)];
+        data = consultaPorGenero(tipoEntreterimento, '80');
 
         data.then(promise => {
             data = promise['results'].slice(0, 4);
@@ -61,7 +64,7 @@ addEventListener('load', () => {
 
                 let imgElement = document.getElementById(`crime-${index+1}`);
                 imgElement.src = posterEntreterimento;
-                imgElement.alt = idEntreterimento;
+                imgElement.alt = `${tipoEntreterimento}-${idEntreterimento}`;
                 
                 index++;
             }    
@@ -85,7 +88,7 @@ addEventListener('load', () => {
                     posterEntreterimento = jsonData['poster_path']; 
                 }).then(() => {
                     let imgElement = document.getElementById(`atualizacao-${indexId+1}`);
-                    imgElement.alt = idEntreterimento;
+                    imgElement.alt = `movie-${idEntreterimento}`;
                     if(posterEntreterimento){
                         imgElement.src = `https://image.tmdb.org/t/p/w500${posterEntreterimento}`;
                     } else {
@@ -99,11 +102,12 @@ addEventListener('load', () => {
             }    
         });
 
-        data = consultaPorGenero(mediaType[Math.floor(Math.random() * 2)], '99');
+        tipoEntreterimento = mediaType[Math.floor(Math.random() * 2)];
+        data = consultaPorGenero(tipoEntreterimento, '99');
 
         data.then(promise => {
             data = promise['results'].slice(0, 4);
-            
+            console.log(promise);
             let index = 0;
             while(index < data.length){
                 let idEntreterimento = data[index]['id'];
@@ -111,10 +115,24 @@ addEventListener('load', () => {
 
                 let imgElement = document.getElementById(`documentario-${index+1}`);
                 imgElement.src = posterEntreterimento;
-                imgElement.alt = idEntreterimento;
+                imgElement.alt = `${tipoEntreterimento}-${idEntreterimento}`;
                 
                 index++;
             }    
+        });
+
+        // pegando todas as ancoras (links/href/a) com este respectivo id.
+        let ancorasCatalogo = document.querySelectorAll('#detalhes-entreterimento');
+
+        ancorasCatalogo.forEach(ancoraCatalogo => {
+            ancoraCatalogo.addEventListener('click', () => {
+                // acessando o elemento 'img' e pegando o 'alt'.
+                let idEntreterimento = ancoraCatalogo.firstChild.nextElementSibling.alt;
+                tipoEntreterimento = idEntreterimento.split('-')[0];
+                idEntreterimento = idEntreterimento.split('-')[1];
+                sessionStorage.setItem('idEntreterimento', idEntreterimento);
+                sessionStorage.setItem('tipoEntreterimento', tipoEntreterimento);
+            })
         });
 
     } else {
@@ -192,5 +210,4 @@ function consultaDadosPorId(mediaType, id) {
     }).then(data => {
         return data;
     })
-
 }
