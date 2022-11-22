@@ -107,12 +107,12 @@ function consultaTendenciasTMDB(timeWindow){
     const page = '1';
     
     return fetch(`${url}?api_key=${api_key}&language=${language}&sort_by=${sort_by}&include_adult=${include_adult}&include_video=${include_video}&page=${page}`, {
-                method: "GET",
-            }).then(response => { 
-                return response.json();
-            }).then(data => {
-                return data;
-            });
+        method: "GET",
+    }).then(response => { 
+        return response.json();
+    }).then(data => {
+        return data;
+    });
 }
 
 // genreId -> id do genero.

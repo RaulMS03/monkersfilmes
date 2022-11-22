@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Jaldi&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/90438f02e0.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css">
+        <Script Src="../../js/Catalogo/pesquisa.js"></Script>
     </head>
 
     <body>
@@ -22,25 +23,36 @@
             <a href="../../Views/Catalogo/catalogo.html">
                 <i class="fa-solid fa-chevron-left fa-2x" ></i>
             </a>
+
             <a>
                 <i class="fa-solid fa-magnifying-glass lupa fa-2x"></i>
             </a>
-            <form>
-                <input type="pesquisa" class="pesquisa" id="floatingPesquisa">
-                <label for="floatingInput"></label>
-            </form>
         </header>
 
         <main>
-            <h1 class="titulo">MAIS ASSISTIDOS NO MOMENTO 🔥</h1>
+            <h1 class="titulo" id="titulo-pesquisa"><b id="tipo-entreterimento">Tipo</b> MAIS ASSISTIDOS NO MOMENTO 🔥</h1>
+
+            <form>
+                <input type="search" class="pesquisa" id="campo-de-busca" onkeypress="validaCampoDePesquisa()" onsubmit="validaCampoDePesquisa()"/>
+                <label for="campo-de-busca"></label>
+            </form>
 
             <div class="retangulo-1">
+                <a id="detalhes-entreterimento" href="./selecao.html">
+                    <img id="entreterimento-1" class="img-poster"/>
+                </a>
             </div>
 
             <div class="retangulo-2">
+                <a id="detalhes-entreterimento" href="./selecao.html">
+                    <img id="entreterimento-2" class="img-poster"/>
+                </a>
             </div>
 
             <div class="retangulo-3">
+                <a id="detalhes-entreterimento" href="./selecao.html">
+                    <img id="entreterimento-3" class="img-poster"/>
+                </a>
             </div>
         </main>
 
