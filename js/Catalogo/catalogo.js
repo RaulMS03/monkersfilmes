@@ -44,7 +44,7 @@ addEventListener('load', () => {
             }    
         });
 
-        mediaType = [
+        let mediaType = [
             'movie',
             'tv'
         ];
