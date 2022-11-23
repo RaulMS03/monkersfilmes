@@ -1,5 +1,6 @@
 body {
-    background-image: url(../img/imagemFundo.png);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(19, 0, 0, 0.7) 100%) ,url(../img/imagemFundo.png);
+    text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 50%);
 }
 
 header {
@@ -10,7 +11,7 @@ header {
     max-height: 200px;
     left: 0px;
     top: -9px;
-
+    
     background: rgba(98, 4, 3, 0.69);
 }
 
@@ -139,7 +140,7 @@ header {
     font-family: 'Jockey One';
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 60px;
     line-height: 89px;
 
     color: rgba(255, 255, 255, 0.78);
@@ -160,9 +161,9 @@ header {
 .sinopse-1 {
     position: absolute;
     width: 100%;
-    max-width: 400px;
+    max-width: 900px;
     height: 42px;
-    left: 465px;
+    left: 445px;
     top: 300px;
 
     font-family: 'Jaldi';
@@ -177,9 +178,9 @@ header {
 .sinopse-2 {
     position: absolute;
     width: 100%;
-    max-width: 800px;
+    max-width: 820px;
     height: 336px;
-    left: 465px;
+    left: 445px;
     top: 440px;
 
     font-family: 'Jaldi';
@@ -411,6 +412,7 @@ footer {
     max-height: 250px;
     top: 2050px;
 
+    
     background: rgba(98, 4, 3, 0.69);
     box-shadow: -2px -10px 21px rgba(0, 0, 0, 0.25);
 }
@@ -499,7 +501,7 @@ footer {
 
     font-family: 'Jockey One';
     font-size: 20px;
-    color: #646464;
+    color: #ffffff;
 }
 
 .img-poster {
