@@ -12,121 +12,35 @@ header {
     left: 0px;
     top: -9px;
     
-    background: rgba(98, 4, 3, 0.69);
 }
 
-.nav-inicio {
+.fa-chevron-left {
     position: absolute;
-    width: 53px;
-    height: 50px;
-    left: 44px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgb(255, 255, 255);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-inicio:hover {
-    color: #FFFFFF;
-} 
-
-.nav-filmes {
-    position: absolute;
-    width: 52px;
-    height: 50px;
-    left: 130px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgba(156, 156, 156, 0.78);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-filmes:hover {
-    color: #FFFFFF;
-}
-
-.nav-series {
-    position: absolute;
-    width: 55px;
-    height: 50px;
-    left: 216px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgba(151, 150, 150, 0.78);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-series:hover {
-    color: #FFFFFF;
-}
-
-.nav-mais {
-    position: absolute;
-    width: 55px;
-    height: 51px;
-    left: 302px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgba(141, 141, 141, 0.78);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-mais:hover {
-    color: #FFFFFF;
-}
-
-.logo {
-    width: 400px;
-
-    position: absolute;
-    left: 530px;
     top: 120px;
+    left: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.fa-chevron-left:hover {
+    color: gray;
 }
 
 .lupa{
     position: absolute;
     left: 1230px;
-    top: 150px;
+    top: 120px;
 
-    color: rgba(141, 141, 141, 0.78);
+    color: rgb(255, 255, 255);
 }
 
 .lupa:active, .lupa:hover {
-    color: #FFFFFF;
+    color: gray;
 }
 
 .perfil {
     position: absolute;
     left: 1280px;
-    top: 150px;
+    top: 120px;
 }
 
 .titulo-1 {
@@ -438,7 +352,7 @@ footer {
     width: 50px;
     height: 45px;
     left: 240px;
-    top: 110px;
+    top: 90px;
 
     color: #FFFFFF;
 }
