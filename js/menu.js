@@ -8,8 +8,8 @@ menuSection.addEventListener("click", () =>{
     document.body.style.overflow = show ? "hidden" : "initial";
 
     dropDown.classList.toggle("on", show);
-    dropDown.style.left = '1370px';
-    dropDown.style.top = '175px';
+    dropDown.style.left = '1220px';
+    dropDown.style.top = '190px';
     dropDown.style.right = 'auto';
     dropDown.style.bottom = 'auto';
 
