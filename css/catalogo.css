@@ -115,11 +115,11 @@ header {
     left: 1230px;
     top: 150px;
 
-    color: rgba(141, 141, 141, 0.78);
+    color: rgb(255, 255, 255);
 }
 
 .lupa:active, .lupa:hover {
-    color: #FFFFFF;
+    color: gray;
 }
 
 .perfil {
