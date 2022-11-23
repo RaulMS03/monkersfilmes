@@ -32,9 +32,9 @@ header {
     text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
 }
 
-.nav-link .active:hover {
+.nav-inicio:hover {
     color: #FFFFFF;
-} 
+}
 
 .nav-filmes {
     position: absolute;
