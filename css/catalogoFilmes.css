@@ -4,11 +4,14 @@ body {
 
 header {
     position: absolute;
-    width: 1560px;
-    height: 198px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1440px;
+    height: 90%;
+    max-height: 200px;
     left: 0px;
     top: -9px;
-
+    
     background: rgba(98, 4, 3, 0.69);
 }
 
@@ -25,14 +28,14 @@ header {
     font-size: 20px;
     line-height: 28px;
 
-    color: rgba(156, 156, 156, 0.78);
+    color: rgba(151, 150, 150, 0.78);
 
     text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
 }
 
 .nav-inicio:hover {
     color: #FFFFFF;
-}
+} 
 
 .nav-filmes {
     position: absolute;
@@ -47,14 +50,14 @@ header {
     font-size: 20px;
     line-height: 28px;
 
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.78);
 
     text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
 }
 
-.nav-filmes .active:hover {
-    color: #FFFFFF;
-} 
+.nav-filmes:hover {
+    color: #ffffff;
+}
 
 .nav-series {
     position: absolute;
@@ -101,21 +104,17 @@ header {
 }
 
 .logo {
-    width: 500px;
+    width: 400px;
 
     position: absolute;
-    left: 30.96%;
-    right: 41.24%;
-    top: -5.25%;
-    bottom: 94.15%;
+    left: 455px;
+    top: 120px;
 }
 
 .lupa{
     position: absolute;
-    left: 82.32%;
-    right: 6.74%;
-    top: 74.17%;
-    bottom: 93.87%;
+    left: 1230px;
+    top: 150px;
 
     color: rgba(141, 141, 141, 0.78);
 }
@@ -126,16 +125,16 @@ header {
 
 .perfil {
     position: absolute;
-    left: 1363px;
-    top: 143px;
+    left: 1280px;
+    top: 150px;
 }
 
 .titulo {
     position: absolute;
     width: 239px;
     height: 134px;
-    left: 38px;
-    top: 170px;
+    left: 530px;
+    top: 250px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -146,7 +145,7 @@ header {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.retangulo-principal {
+/*.retangulo-principal {
     position: absolute;
     width: 1368px;
     height: 550px;
@@ -156,14 +155,14 @@ header {
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-}
+}*/
 
 .titulo-1 {
     position: absolute;
     width: 543px;
     height: 109px;
     left: 38px;
-    top: 1070px;
+    top: 470px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -176,10 +175,10 @@ header {
 
 .retangulo-1 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 36px;
-    top: 1210px;
+    width: 0px;
+    height: 0px;
+    left: 30px;
+    top: 550px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -188,10 +187,10 @@ header {
 
 .retangulo-2 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 423px;
-    top: 1210px;
+    width: 0px;
+    height: 0px;
+    left: 350px;
+    top: 550px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -200,10 +199,10 @@ header {
 
 .retangulo-3 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 810px;
-    top: 1210px;
+    width: 0px;
+    height: 0px;
+    left: 670px;
+    top: 550px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -212,10 +211,10 @@ header {
 
 .retangulo-4 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 1197px;
-    top: 1210px;
+    width: 0px;
+    height: 0px;
+    left: 990px;
+    top: 550px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -227,7 +226,7 @@ header {
     width: 543px;
     height: 109px;
     left: 38px;
-    top: 1479px;
+    top: 1000px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -240,10 +239,10 @@ header {
 
 .retangulo-6 {
     position: absolute;
-    width: 330px;
-    height: 479px;
-    left: 36px;
-    top: 1619px;
+    width: 0px;
+    height: 0px;
+    left: 30px;
+    top: 1090px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -252,10 +251,10 @@ header {
 
 .retangulo-7 {
     position: absolute;
-    width: 330px;
-    height: 479px;
-    left: 423px;
-    top: 1619px;
+    width: 0px;
+    height: 0px;
+    left: 350px;
+    top: 1090px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -264,10 +263,10 @@ header {
 
 .retangulo-8 {
     position: absolute;
-    width: 330px;
-    height: 479px;
-    left: 810px;
-    top: 1619px;
+    width: 0px;
+    height: 0px;
+    left: 670px;
+    top: 1090px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -276,10 +275,10 @@ header {
 
 .retangulo-9 {
     position: absolute;
-    width: 330px;
-    height: 479px;
-    left: 1197px;
-    top: 1619px;
+    width: 0px;
+    height: 0px;
+    left: 990px;
+    top: 1090px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -291,7 +290,7 @@ header {
     width: 543px;
     height: 109px;
     left: 28px;
-    top: 2170px;
+    top: 1550px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -304,10 +303,10 @@ header {
 
 .retangulo-11 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 36px;
-    top: 2300px;
+    width: 0px;
+    height: 0px;
+    left: 30px;
+    top: 1650px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -316,10 +315,10 @@ header {
 
 .retangulo-12 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 423px;
-    top: 2300px;
+    width: 0px;
+    height: 0px;
+    left: 350px;
+    top: 1650px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -328,10 +327,10 @@ header {
 
 .retangulo-13 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 810px;
-    top: 2300px;
+    width: 0px;
+    height: 0px;
+    left: 670px;
+    top: 1650px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -340,10 +339,10 @@ header {
 
 .retangulo-14 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 1197px;
-    top: 2300px;
+    width: 0px;
+    height: 0px;
+    left: 990px;
+    top: 1650px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -355,7 +354,7 @@ header {
     width: 554px;
     height: 52px;
     left: 28px;
-    top: 2550px;
+    top: 2090px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -368,10 +367,10 @@ header {
 
 .retangulo-16 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 36px;
-    top: 2690px;
+    width: 0px;
+    height: 0px;
+    left: 30px;
+    top: 2190px;
     
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -380,10 +379,10 @@ header {
 
 .retangulo-17 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 423px;
-    top: 2690px;
+    width: 0px;
+    height: 0px;
+    left: 350px;
+    top: 2190px;
     
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -392,10 +391,10 @@ header {
 
 .retangulo-18 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 810px;
-    top: 2690px;
+    width: 0px;
+    height: 0px;
+    left: 670px;
+    top: 2190px;
     
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -404,10 +403,10 @@ header {
 
 .retangulo-19 {
     position: absolute;
-    width: 330px;
-    height: 227px;
-    left: 1197px;
-    top: 2690px;
+    width: 0px;
+    height: 0px;
+    left: 990px;
+    top: 2190px;
     
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -416,10 +415,12 @@ header {
 
 footer {
     position: absolute;
-    width: 1640px;
-    height: 274px;
-    left: -77px;
-    top: 3050px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    max-height: 250px;
+    top: 2700px;
 
     background: rgba(98, 4, 3, 0.69);
     box-shadow: -2px -10px 21px rgba(0, 0, 0, 0.25);
@@ -429,7 +430,7 @@ footer {
     position: absolute;
     width: 497px;
     height: 52px;
-    left: 190px;
+    left: 100px;
     top: 40px;
 
     font-family: 'Jaldi';
@@ -445,8 +446,8 @@ footer {
     position: absolute;
     width: 50px;
     height: 45px;
-    left: 340px;
-    top: 110px;
+    left: 240px;
+    top: 80px;
 
     color: #FFFFFF;
 }
@@ -459,7 +460,7 @@ footer {
     position: absolute;
     width: 608px;
     height: 32px;
-    left: 950px;
+    left: 700px;
     top: 40px;
 
     font-family: 'Jaldi';
@@ -475,8 +476,8 @@ footer {
     position: absolute;
     width: 493px;
     height: 53px;
-    left: 910px;
-    top: 120px;
+    left: 670px;
+    top: 90px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
@@ -491,8 +492,8 @@ footer {
 
 ::placeholder {
  position: absolute;
- top: 13px;
- left: 50px;
+ top: 8px;
+ left: 20px;
  font-family: 'Jost';
  font-style: normal;
  font-weight: 400;
@@ -505,16 +506,17 @@ footer {
 .copyright { 
     position: absolute;
     top: 200px;
-    left: 780px;
+    left: 600px;
 
     font-family: 'Jockey One';
     font-size: 20px;
-    color: #646464;
+    color: #ffffff;
 }
 
 .img-poster {
-    height: 500px; 
+    height: 400px; 
     width: auto;
+    border-radius: 20px;
 }
 
 .img-nao-encontrada {
@@ -530,4 +532,5 @@ footer {
     box-sizing: border-box;
     border-radius: var(--imageBorderRadius);
     border: 1px solid #d7d7d7;
+    border-radius: 20px;
 }

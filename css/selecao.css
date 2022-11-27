@@ -1,148 +1,60 @@
 body {
-    background-image: url(../img/imagemFundo.png);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(19, 0, 0, 0.7) 100%) ,url(../img/imagemFundo.png);
+    text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 50%);
 }
 
 header {
     position: absolute;
-    width: 1560px;
-    height: 198px;
+    width: 100%;
+    max-width: 1440px;
+    height: 90%;
+    max-height: 200px;
     left: 0px;
     top: -9px;
-
-    background: rgba(98, 4, 3, 0.69);
+    
 }
 
-.nav-inicio {
+.fa-chevron-left {
     position: absolute;
-    width: 53px;
-    height: 50px;
-    left: 44px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
+    top: 120px;
+    left: 60px;
     color: rgb(255, 255, 255);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
 }
 
-.nav-link .active:hover {
-    color: #FFFFFF;
-} 
-
-.nav-filmes {
-    position: absolute;
-    width: 52px;
-    height: 50px;
-    left: 130px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgba(156, 156, 156, 0.78);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-filmes:hover {
-    color: #FFFFFF;
-}
-
-.nav-series {
-    position: absolute;
-    width: 55px;
-    height: 50px;
-    left: 216px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgba(151, 150, 150, 0.78);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-series:hover {
-    color: #FFFFFF;
-}
-
-.nav-mais {
-    position: absolute;
-    width: 55px;
-    height: 51px;
-    left: 302px;
-    top: 147px;
-
-    font-family: 'Jockey One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-
-    color: rgba(141, 141, 141, 0.78);
-
-    text-shadow: -4px 3px 10px rgba(0, 0, 0, 0.14);
-}
-
-.nav-mais:hover {
-    color: #FFFFFF;
-}
-
-.logo {
-    width: 500px;
-
-    position: absolute;
-    left: 33.96%;
-    right: 41.24%;
-    top: 50.25%;
-    bottom: 94.15%;
+.fa-chevron-left:hover {
+    color: gray;
 }
 
 .lupa{
     position: absolute;
-    left: 92%;
-    right: 6.74%;
-    top: 74.17%;
-    bottom: 93.87%;
+    left: 1230px;
+    top: 120px;
 
-    color: rgba(141, 141, 141, 0.78);
+    color: rgb(255, 255, 255);
 }
 
 .lupa:active, .lupa:hover {
-    color: #FFFFFF;
+    color: gray;
 }
 
 .perfil {
     position: absolute;
-    width: 38px;
-    height: 34px;
-    left: 1363px;
-    top: 143px;
+    left: 1280px;
+    top: 120px;
 }
 
 .titulo-1 {
     position: absolute;
-    width: 757px;
+    width: 100%;
+    max-width: 1300px;
     height: 89px;
     left: 22px;
-    top: 199px;
+    top: 190px;
 
     font-family: 'Jockey One';
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 60px;
     line-height: 89px;
 
     color: rgba(255, 255, 255, 0.78);
@@ -150,8 +62,8 @@ header {
 
 .retangulo-1 {
     position: absolute;
-    width: 411px;
-    height: 576px;
+    width: 0px;
+    height: 0px;
     left: 22px;
     top: 288px;
 
@@ -162,32 +74,34 @@ header {
 
 .sinopse-1 {
     position: absolute;
-    width: 285px;
+    width: 100%;
+    max-width: 900px;
     height: 42px;
-    left: 465px;
-    top: 383px;
+    left: 445px;
+    top: 300px;
 
     font-family: 'Jaldi';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
-    line-height: 44px;
+    line-height: 30px;
 
     color: #FFFFFF;
 }
 
 .sinopse-2 {
     position: absolute;
-    width: 480px;
+    width: 100%;
+    max-width: 820px;
     height: 336px;
-    left: 465px;
-    top: 425px;
+    left: 445px;
+    top: 440px;
 
     font-family: 'Jaldi';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 54px;
+    line-height: 35px;
 
     color: #FFFFFF;
 }
@@ -197,7 +111,7 @@ header {
     width: 554px;
     height: 52px;
     left: 41px;
-    top: 884px;
+    top: 900px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -210,10 +124,10 @@ header {
 
 .retangulo-2 {
     position: absolute;
-    width: 202px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 33px;
-    top: 950px;
+    top: 960px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -222,10 +136,10 @@ header {
 
 .retangulo-3 {
     position: absolute;
-    width: 197px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 297px;
-    top: 950px;
+    top: 960px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -234,10 +148,10 @@ header {
 
 .retangulo-4 {
     position: absolute;
-    width: 201px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 556px;
-    top: 950px;
+    top: 960px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -246,10 +160,10 @@ header {
 
 .retangulo-5 {
     position: absolute;
-    width: 206px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 821px;
-    top: 950px;
+    top: 960px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -258,10 +172,10 @@ header {
 
 .retangulo-6 {
     position: absolute;
-    width: 206px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 1090px;
-    top: 950px;
+    top: 960px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -273,7 +187,7 @@ header {
     width: 554px;
     height: 52px;
     left: 23px;
-    top: 1201px;
+    top: 1280px;
 
     font-family: 'Jockey One';
     font-style: normal;
@@ -286,10 +200,10 @@ header {
 
 .retangulo-7 {
     position: absolute;
-    width: 202px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 30px;
-    top: 1277px;
+    top: 1350px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -298,10 +212,10 @@ header {
 
 .retangulo-8 {
     position: absolute;
-    width: 197px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 294px;
-    top: 1277px;
+    top: 1350px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -310,10 +224,10 @@ header {
 
 .retangulo-9 {
     position: absolute;
-    width: 201px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 554px;
-    top: 1277px;
+    top: 1350px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -322,10 +236,10 @@ header {
 
 .retangulo-10 {
     position: absolute;
-    width: 206px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 818px;
-    top: 1277px;
+    top: 1350px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -334,10 +248,10 @@ header {
 
 .retangulo-11 {
     position: absolute;
-    width: 206px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 1087px;
-    top: 1277px;
+    top: 1350px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -346,10 +260,10 @@ header {
 
 .retangulo-12 {
     position: absolute;
-    width: 202px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 30px;
-    top: 1550px;
+    top: 1680px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -358,10 +272,10 @@ header {
 
 .retangulo-13 {
     position: absolute;
-    width: 197px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 294px;
-    top: 1550px;
+    top: 1680px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -370,10 +284,10 @@ header {
 
 .retangulo-14 {
     position: absolute;
-    width: 201px;
-    height: 227px;
-    left: 538px;
-    top: 1550px;
+    width: 0px;
+    height: 0px;
+    left: 554px;
+    top: 1680px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -382,10 +296,10 @@ header {
 
 .retangulo-15 {
     position: absolute;
-    width: 206px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 818px;
-    top: 1550px;
+    top: 1680px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -394,10 +308,10 @@ header {
 
 .retangulo-16 {
     position: absolute;
-    width: 206px;
-    height: 227px;
+    width: 0px;
+    height: 0px;
     left: 1087px;
-    top: 1550px;
+    top: 1680px;
 
     background: #1E1E1E;
     box-shadow: inset 11px 12px 22px 5px rgba(0, 0, 0, 0.25);
@@ -406,11 +320,13 @@ header {
 
 footer {
     position: absolute;
-    width: 1640px;
-    height: 274px;
-    left: -77px;
-    top: 1900px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    top: 2050px;
 
+    
     background: rgba(98, 4, 3, 0.69);
     box-shadow: -2px -10px 21px rgba(0, 0, 0, 0.25);
 }
@@ -419,7 +335,7 @@ footer {
     position: absolute;
     width: 497px;
     height: 52px;
-    left: 190px;
+    left: 100px;
     top: 40px;
 
     font-family: 'Jaldi';
@@ -435,8 +351,8 @@ footer {
     position: absolute;
     width: 50px;
     height: 45px;
-    left: 340px;
-    top: 110px;
+    left: 240px;
+    top: 90px;
 
     color: #FFFFFF;
 }
@@ -449,7 +365,7 @@ footer {
     position: absolute;
     width: 608px;
     height: 32px;
-    left: 950px;
+    left: 700px;
     top: 40px;
 
     font-family: 'Jaldi';
@@ -465,8 +381,8 @@ footer {
     position: absolute;
     width: 493px;
     height: 53px;
-    left: 910px;
-    top: 120px;
+    left: 670px;
+    top: 110px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
@@ -481,8 +397,8 @@ footer {
 
 ::placeholder {
  position: absolute;
- top: 13px;
- left: 50px;
+ top: 8px;
+ left: 20px;
  font-family: 'Jost';
  font-style: normal;
  font-weight: 400;
@@ -495,11 +411,11 @@ footer {
 .copyright { 
     position: absolute;
     top: 200px;
-    left: 780px;
+    left: 610px;
 
     font-family: 'Jockey One';
     font-size: 20px;
-    color: #646464;
+    color: #ffffff;
 }
 
 .img-poster {
