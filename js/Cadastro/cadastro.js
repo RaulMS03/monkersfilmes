@@ -5,6 +5,9 @@ function validaDadosUsuario (){
 
   let mensagemAlert = '';
 
+  if(nomeUsuario.length < 3)
+    mensagemAlert += 'O nome de usuário deve ter pelo menos 3 caracteres.\n';
+
   if(nomeUsuario.length > 90)
     mensagemAlert += 'O nome de usuário deve ter no máximo 90 caracteres.\n';
 
@@ -12,7 +15,7 @@ function validaDadosUsuario (){
     mensagemAlert += 'O email deve ter no máximo 90 caracteres.\n';
 
   if(senhaUsuario.length > 15)
-    mensagemAlert += 'A senha deve ter no máximo 15 caracteres.'
+    mensagemAlert += 'A senha deve ter no máximo 15 caracteres.';
 
   if(!mensagemAlert.length > 0){
     cadastraUsuario(nomeUsuario, emailUsuario, senhaUsuario) 

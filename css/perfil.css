@@ -138,7 +138,7 @@ body {
     font-family: 'Jaldi';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 25px;
     line-height: 68px;
 
     color: rgba(0, 0, 0, 0.78);
@@ -257,7 +257,7 @@ body {
 .perfil-1 {
     position: absolute;
     width: 190px;
-    height: 194px;
+    height: auto;
     left: 100px;
     top: 1100px;
 }
@@ -265,7 +265,7 @@ body {
 .perfil-2 {
     position: absolute;
     width: 190px;
-    height: 194px;
+    height: auto;
     left: 350px;
     top: 1100px;
 }
@@ -273,7 +273,7 @@ body {
 .perfil-3 {
     position: absolute;
     width: 190px;
-    height: 194px;
+    height: auto;
     left: 600px;
     top: 1100px;
 }
@@ -281,7 +281,7 @@ body {
 .perfil-4 {
     position: absolute;
     width: 190px;
-    height: 194px;
+    height: auto;
     left: 850px;
     top: 1100px;
 }
@@ -289,9 +289,16 @@ body {
 .perfil-5 {
     position: absolute;
     width: 190px;
-    height: 194px;
+    height: auto;
     left: 1100px;
     top: 1100px;
+}
+
+.foto-selecionada {
+    border-style: solid;
+    border-radius: 100px;
+    border-color: lime;
+    border-width: 3.5px;
 }
 
 footer {
