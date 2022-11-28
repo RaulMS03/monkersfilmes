@@ -4,7 +4,7 @@ body {
 
 header {
     position: absolute;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 100%;
     max-width: 1440px;
     height: 90%;

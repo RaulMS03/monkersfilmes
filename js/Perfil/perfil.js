@@ -19,7 +19,9 @@ addEventListener("load", () => {
 
             myParent.appendChild(selectPersonalidades);
 
-            promise.forEach(personalidade => {
+            let data = promise['data'];
+
+            data.forEach(personalidade => {
                 let option = document.createElement("option");
                 option.value = personalidade['cd_personalidade'];
                 option.id = `cd-personalidade-${personalidade['cd_personalidade']}`;

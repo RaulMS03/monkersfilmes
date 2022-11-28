@@ -136,7 +136,7 @@ function consultaEntreterimentoPorId(id, mediaType) {
     const include_adult = 'false';
     const language = 'pt-BR';
 
-    return fetch(`${url}?api_key=${api_key}&language=${language}`, {
+    return fetch(`${url}?api_key=${api_key}&language=${language}&include_adult=${include_adult}`, {
         method: "GET",
     }).then(response => {
         return response.json()
