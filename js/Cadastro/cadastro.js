@@ -14,6 +14,9 @@ function validaDadosUsuario (){
   if(emailUsuario.length > 90)
     mensagemAlert += 'O email deve ter no máximo 90 caracteres.\n';
 
+  if(senhaUsuario.length < 8)
+    mensagemAlert += 'O nome de usuário deve ter pelo menos 3 caracteres.\n';
+
   if(senhaUsuario.length > 15)
     mensagemAlert += 'A senha deve ter no máximo 15 caracteres.';
 
