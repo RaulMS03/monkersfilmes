@@ -13,9 +13,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     or die 
     ("Problema ao conecter-se ao servidor.");
 
+    $cd_usuario = $_POST['cd_usuario'];
     $nm_usuario = $_POST['nm_usuario'];
+    $data_de_nascimento = $_POST['data_de_nascimento'];
     $email_usuario = $_POST['email_usuario'];
     $senha_usuario = $_POST['senha_usuario'];
+    $cd_personalidade = $_POST['cd_personalidade'];
+    $cd_foto_perfil = $_POST['cd_foto_perfil'];
     $response = [];
 
     if (!$connection_string) {
@@ -23,8 +27,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'databaseConnection' => 'False',
         ];
     } else {
-        $cmd = "Insert into tbl_Usuario (cd_usuario, nome_usuario, email_usuario, senha_usuario, cd_foto_perfil) values 
-        (default, '$nm_usuario', '$email_usuario', '$senha_usuario', 1)";
+        if ($data_de_nascimento == null)
+            $cmd = "call sp_atualizaDadosUsuario($cd_usuario, '$nm_usuario', $data_de_nascimento, '$email_usuario', '$senha_usuario', $cd_personalidade, $cd_foto_perfil)";
+        else 
+            $cmd = "call sp_atualizaDadosUsuario($cd_usuario, '$nm_usuario', '$data_de_nascimento', '$email_usuario', '$senha_usuario', $cd_personalidade, $cd_foto_perfil)";
         
         if(mysqli_query($connection_string, $cmd) or die (mysqli_error($connection_string))) {
             $response = [

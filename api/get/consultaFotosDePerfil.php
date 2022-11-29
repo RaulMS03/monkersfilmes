@@ -13,30 +13,44 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     or die 
     ("Problema ao conecter-se ao servidor.");
 
-    $nm_usuario = $_GET['nm_usuario'];
     $response = [];
+    $dadosFotoPerfil = [];
 
     if (!$connection_string) {
         $response = [
             'databaseConnection' => 'False',
         ];
     } else {
-        $cmd = "Select * from tbl_Usuario 
-        where nome_usuario = '$nm_usuario'";
+        $cmd = "Select * from tbl_Foto_Perfil limit 5";
 
         $result = mysqli_query($connection_string, $cmd); 
-        $busca_por_email= mysqli_num_rows($result);
+        $busca_por_foto_perfil = mysqli_num_rows($result);
 
-        if($busca_por_email != 0) {
+        if($busca_por_foto_perfil != 0) {
+
+            $stmt = $connection_string->prepare($cmd);
+            $stmt->execute();
+            $stmt->bind_result($cd_foto_perfil, $url_foto_perfil);
+
+            while($stmt->fetch())
+            {
+                $temp = [
+                    'cd_foto_perfil' => $cd_foto_perfil,
+                    'url_foto_perfil' => $url_foto_perfil,
+                ];
+                array_push($dadosFotoPerfil, $temp);
+            }
+
             $response = [
                 'response' => 'True',
+                'data' => $dadosFotoPerfil
             ];
+            
         } else { 
             $response = [
                 'response' => 'False',
             ];
         }
-
     }
 
     echo json_encode($response, JSON_PRETTY_PRINT);
