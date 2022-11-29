@@ -11,11 +11,14 @@ function validaDadosUsuario (){
   if(nomeUsuario.length > 90)
     mensagemAlert += 'O nome de usuário deve ter no máximo 90 caracteres.\n';
 
+  if(emailUsuario.length < 11)
+    mensagemAlert += 'O email deve ter pelo menos 11 caracteres.\n';
+
   if(emailUsuario.length > 90)
     mensagemAlert += 'O email deve ter no máximo 90 caracteres.\n';
 
   if(senhaUsuario.length < 8)
-    mensagemAlert += 'O nome de usuário deve ter pelo menos 3 caracteres.\n';
+    mensagemAlert += 'A senha deve ter pelo menos 8 caracteres.\n';
 
   if(senhaUsuario.length > 15)
     mensagemAlert += 'A senha deve ter no máximo 15 caracteres.';
@@ -29,7 +32,7 @@ function validaDadosUsuario (){
 }
 
 function cadastraUsuario(nomeUsuario, emailUsuario, senhaUsuario){
-  const url = 'https://monkers-entertainment-api.000webhostapp.com/get/cadastraUsuario.php';
+  const url = 'https://monkers-entertainment-api.000webhostapp.com/post/cadastraUsuario.php';
   
   let parametros = new FormData();
   

@@ -6,11 +6,11 @@ Foi desenvolvido um projeto denominado Monker's Entertainment, com 5 contribuint
 
 ## Diagrama de Casos de uso
 
-![Casos de uso](#)
+![Casos de uso](https://cdn.discordapp.com/attachments/1016110803641970698/1047228627911180288/diagrama_de_casos_de_uso.png)
 
 ## Diagrama de Classes
 
-![Classes](#)
+![Classes](https://cdn.discordapp.com/attachments/1016110803641970698/1047228627638558730/diagrama_de_classes.png)
 
 Ademais o sistema depende de um banco de dados relacional, feito com o SGBDR **MYSQL**, confira a seguir o **modelo conceitual**, também conhecido como diagrama de entidade e relaacionamento (DER), **lógico**, também conhecido como DER lógico, e **físico**.
 
