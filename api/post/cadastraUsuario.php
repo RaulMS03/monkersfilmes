@@ -23,8 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'databaseConnection' => 'False',
         ];
     } else {
-        $cmd = "Insert into tbl_Usuario (cd_usuario, nome_usuario, email_usuario, senha_usuario, cd_foto_perfil) values 
-        (default, '$nm_usuario', '$email_usuario', '$senha_usuario', 1)";
+        $cmd = "call sp_cadastraUsuario('$nm_usuario', '$email_usuario', '$senha_usuario')";
         
         if(mysqli_query($connection_string, $cmd) or die (mysqli_error($connection_string))) {
             $response = [
