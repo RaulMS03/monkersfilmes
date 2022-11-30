@@ -9,6 +9,22 @@ addEventListener('load', () => {
 
             dadosGenerosPersonalidades.then(promise => {
                 dadosGenerosPersonalidades = promise['data'];
+
+                let tamanhoVetor = dadosGenerosPersonalidades.length;
+                if(tamanhoVetor > 4) {
+                    let dadosGeneros = [];
+                    let numerosSorteados = [];
+                    while (dadosGeneros.length < 4) {
+                        dadosSorteados = Math.floor(Math.random() * tamanhoVetor);
+                        if(numerosSorteados.indexOf(dadosSorteados) == -1){
+                            dadosGeneros.push(dadosGenerosPersonalidades[dadosSorteados]);
+                        }
+                        numerosSorteados.push(dadosSorteados); 
+                    }
+                    dadosGenerosPersonalidades = [];
+                    dadosGenerosPersonalidades = dadosGeneros;
+                }
+
                 dadosGenerosPersonalidades.forEach((dadosGeneroPersonalidade, key) => {
                     let nmGenero = dadosGeneroPersonalidade['nm_genero'];
                     let tituloGeneroElements = document.querySelectorAll('#titulo-genero');
