@@ -18,7 +18,7 @@ Ademais o sistema depende de um banco de dados relacional, feito com o SGBDR **M
 ![Conceitual](https://cdn.discordapp.com/attachments/1039333656063389756/1047253041306402866/modelo_conceitual_completo.jpg)
 
 ## Modelo lógico
-![Lógico](https://cdn.discordapp.com/attachments/1039333656063389756/1047253041088315502/modelo_logico_completo.jpg)
+![Lógico](https://cdn.discordapp.com/attachments/1016110803641970698/1047735899259146320/modelo_logico_completo.jpg)
 
 Há também como conferir a [protipagem](https://www.figma.com/proto/NU3eiTybBygO9QzbIUjDF2/Untitled)/[telas](https://www.figma.com/file/NU3eiTybBygO9QzbIUjDF2/Untitled) do sistema no **Figma** e o [site](https://ericcarvlh.github.io/monkers-entertainment/Views/Principais/index.html).
 
