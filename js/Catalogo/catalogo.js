@@ -10,38 +10,70 @@ addEventListener('load', () => {
         let data = consultaTendenciasTMDB('movie', 'week');
 
         data.then(promise => {
-            data = promise['results'].slice(0, 4);
+            data = promise['results'];
             
-            let index = 0;
-            while(index < data.length){
-                let idFilme = data[index]['id'];
-                let posterFilme = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+            let tamanhoVetor = data.length;
+
+            let listaAtualizacao = [];
+            let drawnIndexes = [];
+            while(listaAtualizacao.length < 4){
+                let randomIndex = Math.floor(Math.random() * tamanhoVetor);
+                if((data[randomIndex]['adult']==false) && (drawnIndexes.indexOf(randomIndex) == -1)){
+                    listaAtualizacao.push(randomIndex);
+                    drawnIndexes.push(randomIndex);
+                }
+            }
+
+            listaAtualizacao.forEach((indexEntertainment, index) => {
+                let idFilme = data[indexEntertainment]['id'];
+                let posterFilme = data[indexEntertainment]['poster_path'];
 
                 let imgElement = document.getElementById(`filme-${index+1}`);
-                imgElement.src = posterFilme;
                 imgElement.alt = `movie-${idFilme}`;
-                
-                index++;
-            }
+
+                if(posterFilme){
+                    imgElement.src = posterFilme;
+                    imgElement.src = `https://image.tmdb.org/t/p/w500${posterFilme}`;
+                } else {
+                    imgElement.className = 'img-nao-encontrada';
+                    imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
+                }
+            });
         });
 
         // salva os dados das tendencias de series da semana
         data = consultaTendenciasTMDB('tv', 'week');
 
         data.then(promise => {
-            data = promise['results'].slice(0, 4);
+            data = promise['results'];
             
-            let index = 0;
-            while(index < data.length){
-                let idSerie = data[index]['id'];
-                let posterEntreterimento = `https://image.tmdb.org/t/p/w500${data[index]['poster_path']}`;
+            let tamanhoVetor = data.length;
+
+            let listaAtualizacao = [];
+            let drawnIndexes = [];
+            while(listaAtualizacao.length < 4){
+                let randomIndex = Math.floor(Math.random() * tamanhoVetor);
+                if((data[randomIndex]['adult']==false) && (drawnIndexes.indexOf(randomIndex) == -1)){
+                    listaAtualizacao.push(randomIndex);
+                    drawnIndexes.push(randomIndex);
+                }
+            }
+
+            listaAtualizacao.forEach((indexEntertainment, index) => {
+                let idSerie = data[indexEntertainment]['id'];
+                let posterSerie = data[indexEntertainment]['poster_path'];
 
                 let imgElement = document.getElementById(`serie-${index+1}`);
-                imgElement.src = posterEntreterimento;
                 imgElement.alt = `tv-${idSerie}`;
-                
-                index++;
-            }    
+
+                if(posterSerie){
+                    imgElement.src = posterSerie;
+                    imgElement.src = `https://image.tmdb.org/t/p/w500${posterSerie}`;
+                } else {
+                    imgElement.className = 'img-nao-encontrada';
+                    imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
+                }
+            });
         });
 
         let mediaType = [
@@ -62,16 +94,17 @@ addEventListener('load', () => {
 
         data.then(promise => {
             data = promise['results'];
-            
-            let index = 0;
-            let listaAtualizacao = [];
-            while(listaAtualizacao.length < 4){
-                if(data[index]['adult']==false){
-                    let idEntreterimento = data[index]['id'];
-                    listaAtualizacao.push(idEntreterimento);
-                }
+            let tamanhoVetor = data.length;
 
-                index++;
+            let listaAtualizacao = [];
+            let drawnIndexes = [];
+            while(listaAtualizacao.length < 4){
+                let randomIndex = Math.floor(Math.random() * tamanhoVetor);
+                if((data[randomIndex]['adult']==false) && (drawnIndexes.indexOf(randomIndex) == -1)){
+                    let idEntreterimento = data[randomIndex]['id'];
+                    listaAtualizacao.push(idEntreterimento);
+                    drawnIndexes.push(randomIndex);
+                }
             }
             
             listaAtualizacao.forEach((idEntreterimento, key) => {
