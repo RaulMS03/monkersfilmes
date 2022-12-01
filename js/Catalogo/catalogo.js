@@ -61,21 +61,28 @@ addEventListener('load', () => {
         data = consultaAtualizacoesDaSemana();
 
         data.then(promise => {
-            data = promise['results'].slice(0, 4);
+            data = promise['results'];
             
             let index = 0;
-            let indexId = 0;
-            while(index < data.length){
-                let idEntreterimento = data[index]['id'];
+            let listaAtualizacao = [];
+            while(listaAtualizacao.length < 4){
+                if(data[index]['adult']==false){
+                    let idEntreterimento = data[index]['id'];
+                    listaAtualizacao.push(idEntreterimento);
+                }
+
+                index++;
+            }
+            
+            listaAtualizacao.forEach((idEntreterimento, key) => {
                 let posterEntreterimento;
                 let dadosFilme = consultaDadosPorId('movie', idEntreterimento);
-
                 dadosFilme.then(promise => {
                     return promise;
                 }).then(jsonData => {
                     posterEntreterimento = jsonData['poster_path']; 
                 }).then(() => {
-                    let imgElement = document.getElementById(`atualizacao-${indexId+1}`);
+                    let imgElement = document.getElementById(`atualizacao-${key+1}`);
                     imgElement.alt = `movie-${idEntreterimento}`;
                     if(posterEntreterimento){
                         imgElement.src = `https://image.tmdb.org/t/p/w500${posterEntreterimento}`;
@@ -83,11 +90,8 @@ addEventListener('load', () => {
                         imgElement.className = 'img-nao-encontrada';
                         imgElement.src = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg';
                     }
-                    indexId++;
                 })
-
-                index++;
-            }    
+            });
         });
 
         tipoEntreterimento = mediaType[Math.floor(Math.random() * 2)];
