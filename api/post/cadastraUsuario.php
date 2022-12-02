@@ -3,9 +3,9 @@
 header("Access-Control-Allow-Origin: *");
 
 $host = "sql10.freemysqlhosting.net";
-$username = "sql10580979";
-$password = "nGL9h6etHc";
-$dbname = "sql10580979";
+$username = "sql10582224";
+$password = "CM6ncEedqz";
+$dbname = "sql10582224";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
