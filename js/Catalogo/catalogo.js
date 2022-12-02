@@ -215,7 +215,7 @@ function consultaPorGenero(mediaType, genreId) {
 }
 
 function consultaAtualizacoesDaSemana() {
-    const url = 'https://api.themoviedb.org/3/movie/changes';
+    const url = 'https://api.themoviedb.org/3/movie/upcoming';
     const api_key = '0279131df8eec775fc20e8a5d97731f6';
     const language = 'pt-BR';
     const sort_by = 'primary_release_date.desc';
